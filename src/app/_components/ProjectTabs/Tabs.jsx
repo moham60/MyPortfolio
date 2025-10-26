@@ -10,6 +10,8 @@ import template2 from "@images/projectsScreens/template2.png";
 import template3 from "@images/projectsScreens/template3.png";
 import skate from "@images/projectsScreens/skate.png";
 import template4 from "@images/projectsScreens/dashboardHtmlCss.png";
+import gameApi from "@images/projectsScreens/gameApi.png";
+import weatherApp from "@images/projectsScreens/weatherApp.png"
 import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -83,6 +85,21 @@ const alltabs = [
   {
     icon: <SiJavascript size={30} className="text-yellow-400" />,
     label: "HTML CSS JS",
+    projects:[ {
+        screen: gameApi,
+        name: "Game APP",
+        demo: "https://moham60.github.io/gamesApi/",
+        repo: "https://github.com/moham60/gamesApi",
+        desc: "A lightweight games catalog project that showcases fetching and displaying game data using vanilla JavaScript. Designed as a base for full-stack or API-driven applications.",
+    },
+      {
+        screen: weatherApp,
+        name: "Weather App",
+        demo: "https://moham60.github.io/gamesApi/",
+        repo: "https://github.com/moham60/weatherPrediction2",
+        desc: "A lightweight games catalog project that showcases fetching and displaying game data using vanilla JavaScript. Designed as a base for full-stack or API-driven applications.",
+      },
+    ]
   },
   {
     icon: <SiReact size={30} className="text-sky-400" />,
@@ -238,14 +255,14 @@ export default function ProjectType() {
               
               <Image src={modelInfo.screen} className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] mx-auto" alt={modelInfo.name} />
             <div className="text">
-              <h3 className="text-xl my-2 font-bold">{modelInfo.name}</h3>
-              <p className="text-gray-300 dark:text-gray-500">{ modelInfo.desc}</p>
+              <h3 className="text-xl my-2 dark:text-white text-black font-bold">{modelInfo.name}</h3>
+              <p className="text-gray-400 dark:text-gray-500">{ modelInfo.desc}</p>
               </div>
-              <div className=" my-2 ">
-                <span className="flex my-4 items-center gap-2">repo : <a href={modelInfo.repo} target="_blank">
+              <div className=" my-2  text-black ">
+                <span className="flex my-4 items-center gap-2">repo : <a href={modelInfo.repo} className="hover:text-purple-600 dark:hover:text-purple-400" target="_blank">
                   <FaGithub size={25}/>
                 </a> </span>
-                 <span className="flex items-center gap-2">demo : <a href={modelInfo.demo} target="_blank">
+                 <span className="flex items-center gap-2">demo : <a href={modelInfo.demo} className="hover:text-purple-600 dark:hover:text-purple-400" target="_blank">
                   <FaGlobe size={25}/>
                 </a> </span>
               </div>

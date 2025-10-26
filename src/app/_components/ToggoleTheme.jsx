@@ -16,15 +16,15 @@ export default function ToggoleTheme() {
 
     return (
       <Button
-        className="cursor-pointer"
+        className="cursor-pointer outline-0 "
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
         }}
         size="icon">
         {theme == "light" ? (
-          <Moon className="h-[1.2rem] text-black w-[1.2rem] " />
+        <Moon className="w-5 h-5  text-gray-800" />
         ) : (
-          <Sun className="h-[1.2rem]    w-[1.2rem]  " />
+        <Sun className="w-5 h-5 text-yellow-300" />
         )}
 
         <span className="sr-only">Toggle theme</span>

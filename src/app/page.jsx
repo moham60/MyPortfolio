@@ -5,6 +5,7 @@ import About from "./about/page";
 import Projects from "./projects/page";
 import Contact from "./contact/page";
 import Loading from "./loading";
+import { ServiceSection } from "./_components/ServiceSection/ServiceSection";
 
 export default function Hero() {
   const [loading, setloading] = useState(true);
@@ -16,13 +17,14 @@ export default function Hero() {
     return () => clearTimeout(timer);
   },[])
   return (
-    <div className=" bg-transparent   dark:text-white">
+    <div className="dark:text-white">
       {loading ? (
         <Loading />
       ) : (
           <>
               <Home/>
               <About />
+                <ServiceSection/>
                <Projects />
              <Contact />
           </>

@@ -43,6 +43,9 @@
     --color-sidebar-ring: var(--sidebar-ring);
 
 }
+/*to display particles*
+
+
 /* للـ Scrollbar كله */
 ::-webkit-scrollbar {
   width: 8px; /* عرض الـ scrollbar */
@@ -136,8 +139,13 @@
 
 }
 body{
-    overflow-x: hidden;
-  
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+section{
+  position: relative;
+  z-index: 2;
 }
 /* الدائرة الصغيرة */
 .cursor-dot {
@@ -177,10 +185,7 @@ h1{
 
 
 
-section{
-  
-  min-height: 100vh;
-}
+
 
 
 .mySwiper{

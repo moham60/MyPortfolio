@@ -3,6 +3,8 @@ import { ChevronDownIcon } from "flowbite-react";
 import { motion } from "framer-motion";
 import 'flowbite'
 import { transition } from "../../../../transition";
+import ContactForm from "./ContactForm";
+import { Title } from "../SectionTiitle/Title";
 export default function ContactSection() {
     return (
     
@@ -11,20 +13,13 @@ export default function ContactSection() {
       whileInView={{ opacity: 1, x: 0 }}
 
       transition={transition}
-      className="py-20 min-h-screen  ">
+      className="p-16  min-h-screen  ">
      
-      <div>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl text-center font-semibold tracking-tight text-balance text-foreground dark:text-white sm:text-5xl">
-          Contact Me
-        </motion.h2>
+   
+         <Title title={"Contact Me"}/>
 
-        
-     
-        </div>
+        <ContactForm/>
+      
        
     </motion.section>
   

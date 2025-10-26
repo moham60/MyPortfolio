@@ -6,6 +6,7 @@ import { transition } from "../../../../transition";
 import { FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb } from "react-icons/si";
 import { RiDatabase2Line, RiDatabaseLine } from "react-icons/ri";
+import { Title } from "../SectionTiitle/Title";
 const skills = [
   <FaHtml5 size={40} color="#E34F26" />,
   <FaCss3Alt color="#1572B6" size={40} />,
@@ -20,24 +21,19 @@ const skills = [
   <RiDatabase2Line size={40} color="#2563EB" />,
 ];
 export default function AboutSection() {
-    return (
-         
+    return (    
   <motion.section
       initial={{ opacity: 0, x: 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={transition}
-      className="max-w-5xl mx-auto px-6 py-16">
-      <motion.h2
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-5  mt-10 text-black dark:text-white">
-        About Me
-      </motion.h2>
+      className="p-16">
+      <Title title={"About Me"}/>
 
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+      <motion.div initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={transition} className="flex  gap-2 flex-col sm:flex-row items-center">
         {/* صورة شخصية */}
-        <div className="flex justify-center">
+        <div className="flex w-full sm:w-[29%] md:w-[39%]  justify-center">
           <Image
             src={myPhoto}
             alt="My Photo"
@@ -48,8 +44,8 @@ export default function AboutSection() {
         </div>
 
         {/* محتوى التعريف */}
-        <div>
-          <h2 className="text-2xl text-gray-800 dark:text-white font-semibold mb-4">
+        <div className="w-full sm:w-[70%] md:w-[60%]">
+          <h2 className="text-4xl text-gray-800 dark:text-white font-semibold mb-4">
             👋 Hi, I'm Mohamed
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-1">
@@ -68,21 +64,21 @@ export default function AboutSection() {
             contributions, and always learning new technologies to improve my
             skills.
             </p>
-            <motion.div initial={{ opacity: 0, x: -40 }}
+        
+        </div>
+      </motion.div>
+          <motion.div initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={transition}  className="skills my-6 text-center">
-        <h3 className="text-2xl text-gray-900 dark:text-white font-semibold my-4">🚀 Skills</h3>
+       <Title title={"Skills"}/>
         <ul className="flex justify-center flex-wrap gap-3">
           {skills.map((skill, idx) => (
-            <li key={idx} className="text-sm font-medium">
+            <li key={idx} className="font-medium">
               {skill}
             </li>
           ))}
         </ul>
       </motion.div>
-        </div>
-      </div>
-      
     </motion.section>
    
      

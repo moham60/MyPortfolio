@@ -6,6 +6,7 @@ import Navbar from "./_components/navbar/Navbar";
 import Cursor from "./_components/Cursor/Cursor";
 import Footer from "./_components/footer/Footer";
 import ThemeProvider from "./_components/ThemeProvider";
+import ParticleBackground from "./_components/Particles/ParticleBackground";
 
 
 
@@ -54,13 +55,14 @@ export default function RootLayout({ children }) {
         </head>
       <body
         className={`${suseFont.variable} ${robotoFont.variable} relative  antialiased`}>
-       
+     
        
            <ThemeProvider
-        >
+              >
+            <ParticleBackground/>
           <Navbar />
          <Cursor /> 
-          <main className="dark:bg-[#0F1726]  bg-white">{children}</main>
+          <main className="dark:bg-[#0F1726]  bg-gray-200">{children}</main>
           <Footer/>
         </ThemeProvider>
   

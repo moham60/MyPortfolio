@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className=" bg-white dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  shadow-lg dark:shadow-white shadow-black">
+    <footer className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  ">
       <div className="p-6 md:py-10 max-w-screen-xl mx-auto">
         <div className="sm:flex sm:items-center sm:justify-between">
           {/* Logo */}
@@ -11,8 +11,8 @@ export default function Footer() {
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
             <span className="text-2xl font-extrabold bg-gradient-to-r 
-            from-violet-700 via-cyan-600 to-pink-500
-            dark:from-violet-500 dark:via-cyan-500 dark:to-pink-200 bg-clip-text text-transparent">
+             from-violet-800 to-pink-700
+             bg-clip-text text-transparent">
               Mohamed
             </span>
           </Link>
