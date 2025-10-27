@@ -1,20 +1,22 @@
 "use client"
-import { useEffect, useState } from "react";
-import Home from "./_components/HomeSection/HomeSection";
-import About from "./about/page";
-import Projects from "./projects/page";
-import Contact from "./contact/page";
+import dynamic from "next/dynamic";
 import Loading from "./loading";
-import { ServiceSection } from "./_components/ServiceSection/ServiceSection";
-import { EducationSection } from "./_components/EducationSection/EducationSection";
+import { useEffect, useState } from "react";
+const Home = dynamic(() => import("./_components/HomeSection/HomeSection"), 
+);
+const About=dynamic (()=>import ( "./about/page"));
 
+const Projects=dynamic ( ()=> import ( "./projects/page"));
+const Contact=dynamic ( ()=> import ( "./contact/page"));
+const ServiceSection=dynamic ( ()=> import ( "./_components/ServiceSection/ServiceSection"));
+const EducationSection=dynamic ( ()=> import ( "./_components/EducationSection/EducationSection"));
 export default function Hero() {
   const [loading, setloading] = useState(true);
  
   useEffect(() => {
     const timer = setTimeout(() => {
       setloading(false)
-    }, 2000);
+    }, 500);
     return () => clearTimeout(timer);
   },[])
   return (

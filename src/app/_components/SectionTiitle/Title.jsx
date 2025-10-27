@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
 import { transition } from "../../../../transition";
-export function Title({title}) {
+export default function Title({title}) {
     return (
        <motion.h2
         initial={{ opacity: 0,y:40 }}

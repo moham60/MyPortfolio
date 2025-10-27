@@ -1,12 +1,14 @@
 'use client'
 import React, { useState } from 'react'
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
 import { motion} from "motion/react";
 import { transition } from '../../../../transition';
 import { CiMenuFries } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
-import ToggoleTheme from '../ToggoleTheme';
-import { LinkTransition } from '../LinkTransition/LinkTransition';
+const ToggoleTheme=dynamic(()=>import ( '../ToggoleTheme'));
+
+const LinkTransition= dynamic(()=> import('../LinkTransition/LinkTransition'))
 
 export default function Navbar() {
    const pathname = usePathname();

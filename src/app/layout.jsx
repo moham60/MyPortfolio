@@ -1,13 +1,13 @@
 import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-
+import dynamic from "next/dynamic";
 import "react-loadly/styles.css";
-import Navbar from "./_components/navbar/Navbar";
-import Cursor from "./_components/Cursor/Cursor";
-import Footer from "./_components/footer/Footer";
-import ThemeProvider from "./_components/ThemeProvider";
-import ParticleBackground from "./_components/Particles/ParticleBackground";
-import SocialContact from "./_components/SocialContact/SocialContact";
+const Navbar=dynamic(()=>import("./_components/navbar/Navbar"));
+  const Cursor=dynamic(() =>import  ( "./_components/Cursor/Cursor"));
+const Footer=dynamic(()=>import   ( "./_components/footer/Footer"));
+const ThemeProvider=dynamic(()=>import  ( "./_components/ThemeProvider"));
+const ParticleBackground=dynamic(()=>import  ( "./_components/Particles/ParticleBackground"));
+const SocialContact=dynamic(()=>import  ( "./_components/SocialContact/SocialContact"));
 
 
 
@@ -77,3 +77,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+/*dynamic import 
+دي معناها ان لما اليوزر يوصل للمكون ده هيحصلو تصدير غير كده هو لسه مش موجود
+*/

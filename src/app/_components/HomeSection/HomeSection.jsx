@@ -3,7 +3,6 @@ import Image from "next/image";
 import img1 from "@images/shape1.webp";
 import { motion } from "motion/react";
 import { transition } from "../../../../transition";
-import { LinkTransition } from "../LinkTransition/LinkTransition";
 import Link from "next/link";
 export default function Home() {
     return (

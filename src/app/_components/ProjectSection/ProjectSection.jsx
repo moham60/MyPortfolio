@@ -2,7 +2,8 @@
 import { motion } from "motion/react";
 import ProjectType from "../ProjectTabs/Tabs";
 import { transition } from "../../../../transition";
-import { Title } from "../SectionTiitle/Title";
+const Title = dynamic(()=>import("../SectionTiitle/Title"));
+import dynamic from "next/dynamic";
 export default function ProjectSection() {
     return (
         

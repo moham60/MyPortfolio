@@ -1,5 +1,6 @@
-import { Title } from "../SectionTiitle/Title";
-import Education from "./EducationCom";
+import dynamic from "next/dynamic";
+const Title = dynamic(()=>import("../SectionTiitle/Title"));
+const Education=dynamic(()=>import("./EducationCom"));
 const educations = [
   {
     degree: "Diploma in Front-End Development (React & Next.js)",
@@ -44,7 +45,7 @@ const educations = [
   },
 ];
 
-export function EducationSection() {
+export default function EducationSection() {
     return (
         <section className=" px-4 py-16  sm:p-16  min-h-screen">
         <Title title={"Education Journey"} />

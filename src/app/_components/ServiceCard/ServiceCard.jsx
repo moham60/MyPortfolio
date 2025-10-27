@@ -1,4 +1,4 @@
-export function Card({title,icon,desc}) {
+export default function Card({title,icon,desc}) {
     return (
       <div className="bg-white border border-gray-200 rounded-xl shadow-lg flex  flex-col p-4  items-center justify-center dark:bg-gray-800 dark:border-gray-800 transition-all duration-500 hover:shadow-purple-600  
       hover:scale-105  text-center dark:hover:shadow-purple-500 dark:shadow-neutral-700/80">

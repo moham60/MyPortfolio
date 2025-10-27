@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { usePathname, useRouter } from "next/navigation";
 
-export function LinkTransition({ href, children }) {
+export default function LinkTransition({ href, children }) {
   const router = useRouter();
   const pathname = usePathname();//to get current path
   const handleClick = (e) => {

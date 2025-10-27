@@ -10,8 +10,10 @@ import {
   Shield, 
   Zap 
 } from "lucide-react";
-import { Card } from "../ServiceCard/ServiceCard";
-import { Title } from "../SectionTiitle/Title";
+import dynamic from "next/dynamic";
+const Card=dynamic(()=>import( "../ServiceCard/ServiceCard"));
+const Title = dynamic(()=>import("../SectionTiitle/Title"));
+
 import { motion } from "framer-motion";
 import { transition } from "../../../../transition";
 export const services = [
@@ -72,7 +74,7 @@ export const services = [
 ];
 
 
-export function ServiceSection() {
+export default function ServiceSection() {
 
     return (
         <motion.section

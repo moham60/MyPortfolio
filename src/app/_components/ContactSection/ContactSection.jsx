@@ -1,9 +1,10 @@
 'use client'
 import { motion } from "framer-motion";
-import 'flowbite'
+import dynamic from "next/dynamic";
 import { transition } from "../../../../transition";
-import ContactForm from "./ContactForm";
-import { Title } from "../SectionTiitle/Title";
+const ContactForm = dynamic(()=>import("./ContactForm"));
+const Title = dynamic(()=>import("../SectionTiitle/Title"));
+
 export default function ContactSection() {
     return (
     

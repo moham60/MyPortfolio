@@ -23,14 +23,7 @@ import { FaX } from "react-icons/fa6";
 
 
 
-const underline = {
-  position: "absolute",
-  bottom: -2,
-  left: 0,
-  right: 0,
-  height: 2,
-  background: "var(--accent)",
-};
+
 
 const iconContainer = {
   display: "flex",
