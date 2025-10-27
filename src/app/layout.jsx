@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Cursor /> 
           <SocialContact/>
-          <main className="dark:bg-[#0F1726] overflow-x-hidden  bg-white/85">{children}</main>
+          <main className="dark:bg-[#0F1726] overflow-hidden  bg-white/85">{children}</main>
           <Footer/>
         </ThemeProvider>
   
