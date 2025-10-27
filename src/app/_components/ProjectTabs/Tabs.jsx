@@ -12,7 +12,7 @@ import skate from "@images/projectsScreens/skate.png";
 import template4 from "@images/projectsScreens/dashboardHtmlCss.png";
 import gameApi from "@images/projectsScreens/gameApi.png";
 import weatherApp from "@images/projectsScreens/weatherApp.png"
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -138,6 +138,7 @@ export default function ProjectType() {
     repo:"",
     
    })
+  const modelRef = useRef(null);
      /*========== Handlers ============== */
    const changeModelInfo=(project)=> {
     const newModelInfo={...modelInfo};
@@ -245,8 +246,14 @@ export default function ProjectType() {
       </div>
      
     </motion.div>
-      {projectModel && <div className=" min-h-screen absolute z-50 inset-0 bg-[#0000008f]">
-            <div className=" w-[95%]  bg-white  sm:w-[80%]  md:w-[60%] lg:w-[50%]  z-50 absolute top-[50%] left-[50%] 
+      {projectModel && <div onClick={(e) => {
+        if (e.target !== modelRef.current) {
+          setOpenModel(false);
+        }
+      }} className="  fixed z-[9999] inset-0 bg-[#0000008f]">
+        <div ref={modelRef} onClick={(e) => {
+          e.stopPropagation();
+            }} className=" w-[95%]  bg-white  sm:w-[80%]  md:w-[60%] lg:w-[50%]  z-50 absolute top-[50%] left-[50%] 
           translate-x-[-50%] translate-y-[-50%] rounded-md p-4 dark:bg-gray-800">
              
                 <button onClick={()=>setOpenModel(false)} className="closeModel absolute right-1  cursor-pointer text-gray-900  hover:bg-gray-200 dark:text-gray-600 flex items-center justify-center dark:hover:bg-gray-100 p-2 rounded-md  top-2">

@@ -15,8 +15,10 @@ const [openMobileNav, setopenMobileNav] = useState(false)
      { href: "/", label: "Home" },
      { href: "/about", label: "About" },
      { href: "/services", label: "Services" },
+       { href: "/education", label: "Education" },
      { href: "/projects", label: "Projects" },
      { href: "/contact", label: "Contact" },
+    
    ];
   return (
     <motion.nav
@@ -94,17 +96,18 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           openMobileNav ? "translate-x-0" : "translate-x-[100%]"
         }    
 
-        bg-gradient-to-r dark:from-gray-700 dark:via-gray-800 dark:to-gray-900
-        from-gray-100 via-gray-300 to-gray-400
+        dark:bg-gray-800 bg-white 
+        
           `}>
-        <button onClick={()=>setopenMobileNav(false)} className="close absolute right-2 top-2">
-           <AiOutlineClose size={20} className='text-gray-700 dark:text-gray-400' />
+        <button onClick={()=>setopenMobileNav(false)} className="close p-2 flex justify-center items-center bg-gray-700 rounded cursor-pointer hover:bg-gray-500 absolute right-2 top-2">
+           <AiOutlineClose size={20} className='text-white dark:text-gray-400' />
         </button>
         <div className="links mt-10 flex flex-col">
-{LinkTransitions.map((Link) => (
+    {LinkTransitions.map((Link) => (
           <LinkTransition
             key={Link.href}
-            href={Link.href}
+        href={Link.href}
+        onClick={()=>setopenMobileNav(false)}
             className={`px-3 py-2 w-full my-3 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
@@ -113,7 +116,11 @@ const [openMobileNav, setopenMobileNav] = useState(false)
                 }`}>
             {Link.label}
           </LinkTransition>
-        ))}
+    ))}
+          <div className="toggoleTheme mt-4">
+ <ToggoleTheme/>
+          </div>
+         
         </div>
         
       </div>

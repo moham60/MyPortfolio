@@ -7,6 +7,7 @@ import Cursor from "./_components/Cursor/Cursor";
 import Footer from "./_components/footer/Footer";
 import ThemeProvider from "./_components/ThemeProvider";
 import ParticleBackground from "./_components/Particles/ParticleBackground";
+import SocialContact from "./_components/SocialContact/SocialContact";
 
 
 
@@ -61,8 +62,9 @@ export default function RootLayout({ children }) {
               >
             <ParticleBackground/>
           <Navbar />
-         <Cursor /> 
-          <main className="dark:bg-[#0F1726]  bg-gray-200">{children}</main>
+          <Cursor /> 
+          <SocialContact/>
+          <main className="dark:bg-[#0F1726]  bg-white/85">{children}</main>
           <Footer/>
         </ThemeProvider>
   

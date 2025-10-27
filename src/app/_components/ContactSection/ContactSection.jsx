@@ -1,5 +1,4 @@
 'use client'
-import { ChevronDownIcon } from "flowbite-react";
 import { motion } from "framer-motion";
 import 'flowbite'
 import { transition } from "../../../../transition";

@@ -193,10 +193,12 @@ h1{
  width: 100% !important;
 }
 .mySwiper .swiper-pagination {
-  bottom: 0 !important;       /* تخليها في آخر البلوك */
+ 
   position: absolute !important;
+   bottom: 0 !important;       /* تخليها في آخر البلوك */
 }
 .swiper-pagination-bullet{
   width: 18px !important;
   height: 18px !important;
+  background-color:#6b46c1 !important;
 }

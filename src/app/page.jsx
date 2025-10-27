@@ -6,6 +6,7 @@ import Projects from "./projects/page";
 import Contact from "./contact/page";
 import Loading from "./loading";
 import { ServiceSection } from "./_components/ServiceSection/ServiceSection";
+import { EducationSection } from "./_components/EducationSection/EducationSection";
 
 export default function Hero() {
   const [loading, setloading] = useState(true);
@@ -24,7 +25,9 @@ export default function Hero() {
           <>
               <Home/>
               <About />
-                <ServiceSection/>
+            <ServiceSection />
+                  <EducationSection/>
+            
                <Projects />
              <Contact />
           </>
