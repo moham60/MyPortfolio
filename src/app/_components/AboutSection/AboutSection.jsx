@@ -26,7 +26,7 @@ export default function AboutSection() {
       initial={{ opacity: 0, x: 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={transition}
-      className="p-16">
+      className=" px-4 py-16  sm:p-16">
       <Title title={"About Me"}/>
 
       <motion.div initial={{ opacity: 0, x: -40 }}

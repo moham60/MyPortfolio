@@ -46,7 +46,7 @@ const educations = [
 
 export function EducationSection() {
     return (
-        <section className="p-16  min-h-screen">
+        <section className=" px-4 py-16  sm:p-16  min-h-screen">
         <Title title={"Education Journey"} />
        
         {educations.map(education => (

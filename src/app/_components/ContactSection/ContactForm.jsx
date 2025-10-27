@@ -22,7 +22,7 @@ export default function ContactForm() {
     })
     }
   return (
-    <div className="w-full text-black dark:text-white  mx-auto my-4 max-w-lg px-4">
+    <div className="w-full text-black dark:text-white  mx-auto my-4 max-w-xl px-4">
       <form ref={form} onSubmit={sendEmail}>
           <Fieldset className="space-y-6 rounded-xl dark:bg-white/5 bg-white shadow-lg
         p-6 sm:p-10">

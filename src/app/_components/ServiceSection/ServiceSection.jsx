@@ -79,7 +79,7 @@ export function ServiceSection() {
             initial={{ opacity: 0, x: 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={transition}
-            className=" mx-auto p-16">
+            className="px-4 py-16  sm:p-16">
 
             <Title title={"My Services"} />
             <motion.div      initial={{ opacity: 0, y: 40 }}

@@ -25,8 +25,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
       initial={{ y: "-100%" }}
       transition={transition}
       animate={{ y: 0 }}
-      className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  fixed w-full z-20 top-0  start-0 border-b dark:border-gray-800  border-gray-100  ">
-      <div className=" flex w-full   items-center justify-between mx-auto p-4">
+      className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  fixed w-full z-20 top-0 left-0 right-0 start-0 border-b dark:border-gray-800  border-gray-100  ">
+      <div className=" flex max-w-7xl    items-center justify-between mx-auto p-4">
         <LinkTransition
           href={"/"}
           className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -92,7 +92,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
       </div>
 
       <div
-        className={ `fixed inset-0 min-h-screen   transition-all duration-700  py-10 px-6  ${
+        className={ `fixed inset-0 min-h-screen    transition-all duration-700  py-10 px-6  ${
           openMobileNav ? "translate-x-0" : "translate-x-[100%]"
         }    
 

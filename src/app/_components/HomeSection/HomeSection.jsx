@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
     return (
     
-      <section className="relative  py-24 h-[88vh]  flex flex-col justify-center ">
+      <section className="relative px-4 py-16  sm:p-16 h-[88vh]  flex flex-col justify-center ">
         
             <motion.div
               initial={{ opacity: 0 }}
@@ -18,13 +18,13 @@ export default function Home() {
               <Image src={img1} className="w-full" alt="img1" />
             </motion.div>
             <motion.div
-              className="flex flex-col items-center justify-center gap-5"
+              className="flex flex-col items-center  w-full justify-center gap-5"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={transition}>
             <div className="title text-center relative">
   <h1
-    className="text-4xl md:text-6xl font-extrabold mb-4 
+    className="text-2xl md:text-6xl font-extrabold mb-4 
     bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500
     dark:from-purple-300 dark:via-fuchsia-400 dark:to-pink-300
     bg-clip-text text-transparent"
@@ -32,7 +32,7 @@ export default function Home() {
     Mohamed Abdelwahab
   </h1>
 
-  <h2 className="text-lg md:text-2xl text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
+  <h2 className="text-xl md:text-2xl text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
     Passionate{" "}
     <span className="text-fuchsia-600 dark:text-fuchsia-400 font-semibold">
       MERN Stack Developer
@@ -49,7 +49,7 @@ export default function Home() {
   </h2>
 </div>
 
-<div className="btns flex items-center justify-center gap-4 mt-8">
+<div className="btns flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
   {/* Primary Button */}
   <button
     className="min-w-40 px-6 py-3 rounded-xl font-semibold 

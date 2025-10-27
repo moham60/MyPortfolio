@@ -10,7 +10,7 @@ export default function ProjectSection() {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.2 }}
-      className="p-16"
+      className="px-4 py-16  sm:p-16"
       transition={transition}>
         <Title title={"My Projects"}/>
       <ProjectType />

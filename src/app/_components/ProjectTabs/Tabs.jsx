@@ -184,7 +184,7 @@ export default function ProjectType() {
             ))}
           </ul>
         </nav>
-        <main style={iconContainer} className="p-20 ">
+        <main style={iconContainer} className="px-2 py-4 sm:p-10 ">
             
             <Swiper
                 modules={[Pagination]}
