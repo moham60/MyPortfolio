@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import Loading from "../loading";
 
-const AboutSection = dynamic(()=>import("../_components/AboutSection/AboutSection"), {
+const AboutSection = dynamic(()=>import("../_components/Sections/AboutSection/AboutSection"), {
   ssr: false,
   loading:()=><Loading/>
 }); 

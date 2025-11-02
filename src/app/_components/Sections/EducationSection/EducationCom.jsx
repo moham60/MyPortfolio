@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { transition } from "../../../../transition";
+import { transition } from "../../../../../transition";
 export default function Education({
     degree, institution, duration, location, skills, description, projects }) {
     return (

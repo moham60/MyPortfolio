@@ -1,5 +1,4 @@
 'use client'
-import Title from "../SectionTiitle/Title";
 import Education from "./EducationCom";
 const educations = [
   {
@@ -45,7 +44,8 @@ const educations = [
   },
 ];
 import { motion } from "framer-motion";
-import { transition } from "../../../../transition";
+import Title from "../../SectionTiitle/Title";
+import { transition } from "../../../../../transition";
 
 export default function EducationSection() {
     return (

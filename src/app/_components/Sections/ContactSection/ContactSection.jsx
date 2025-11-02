@@ -1,8 +1,8 @@
 'use client'
 import { motion } from "framer-motion";
-import { transition } from "../../../../transition";
+import { transition } from "../../../../../transition";
 import ContactForm from "./ContactForm";
-import Title from "../SectionTiitle/Title";
+import Title from "../../SectionTiitle/Title";
 
 export default function ContactSection() {
     return (

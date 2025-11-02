@@ -10,12 +10,11 @@ import {
   Shield, 
   Zap 
 } from "lucide-react";
-import dynamic from "next/dynamic";
-const Card=dynamic(()=>import( "./ServiceCard/ServiceCard"));
-const Title = dynamic(()=>import("../SectionTiitle/Title"));
 
 import { motion } from "framer-motion";
-import { transition } from "../../../../transition";
+import Title from "../../SectionTiitle/Title";
+import Card from "./ServiceCard/ServiceCard";
+import { transition } from "../../../../../transition";
 export const services = [
   {
     icon: Code,

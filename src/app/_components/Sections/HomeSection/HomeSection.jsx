@@ -1,8 +1,7 @@
 'use client'
-import Image from "next/image";
-import img1 from "@images/shape1.webp";
+
 import { motion } from "motion/react";
-import { transition } from "../../../../transition";
+import { transition } from "../../../../../transition";
 import Link from "next/link";
 export default function Home() {
     return (
@@ -13,13 +12,7 @@ export default function Home() {
         transition={transition}
         className="relative px-4 py-16  sm:p-16 h-[88vh]  flex flex-col justify-center ">
         
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={transition}
-              className="absolute w-[50%]   top-0 left-[50%] translate-x-[-50%] pointer-events-none z-40">
-              <Image src={img1} className="w-full" alt="img1" />
-            </motion.div>
+        
             <motion.div
               className="flex flex-col items-center  w-full justify-center gap-5"
               initial={{ scale: 0 }}

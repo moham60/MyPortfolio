@@ -1,7 +1,7 @@
 'use client'
 import dynamic from "next/dynamic";
 import Loading from "../loading";
-const ProjectSection = dynamic(()=>import("../_components/ProjectSection/ProjectSection"), {
+const ProjectSection = dynamic(()=>import("../_components/Sections/ProjectSection/ProjectSection"), {
   ssr: false,
   loading:()=><Loading/>
 });

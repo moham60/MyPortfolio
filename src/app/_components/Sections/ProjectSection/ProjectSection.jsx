@@ -1,8 +1,8 @@
 "use client"
 import { motion } from "motion/react";
 import ProjectType from "./Projects/Projects";
-import { transition } from "../../../../transition";
-const Title = dynamic(()=>import("../SectionTiitle/Title"));
+import { transition } from "../../../../../transition";
+const Title = dynamic(()=>import("../../SectionTiitle/Title"));
 import dynamic from "next/dynamic";
 import Projects from "./Projects/Projects";
 
