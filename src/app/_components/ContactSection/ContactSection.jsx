@@ -1,18 +1,16 @@
 'use client'
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
 import { transition } from "../../../../transition";
-const ContactForm = dynamic(()=>import("./ContactForm"));
-const Title = dynamic(()=>import("../SectionTiitle/Title"));
+import ContactForm from "./ContactForm";
+import Title from "../SectionTiitle/Title";
 
 export default function ContactSection() {
     return (
     
  <motion.section
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-
-      transition={transition}
+       initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={transition}
       className=" px-4 py-16  sm:p-16  min-h-screen  ">
      
    

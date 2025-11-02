@@ -1,5 +1,10 @@
+'use client'
 import dynamic from "next/dynamic";
-const ContactSection = dynamic(()=>import("../_components/ContactSection/ContactSection"));
+import Loading from "../loading";
+const ContactSection = dynamic(()=>import("../_components/ContactSection/ContactSection"), {
+  ssr: false,
+  loading:()=><Loading/>
+});
 export default function Contact() {
   return (
     <ContactSection/>

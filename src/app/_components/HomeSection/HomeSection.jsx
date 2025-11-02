@@ -7,7 +7,11 @@ import Link from "next/link";
 export default function Home() {
     return (
     
-      <section className="relative px-4 py-16  sm:p-16 h-[88vh]  flex flex-col justify-center ">
+      <motion.section
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={transition}
+        className="relative px-4 py-16  sm:p-16 h-[88vh]  flex flex-col justify-center ">
         
             <motion.div
               initial={{ opacity: 0 }}
@@ -74,7 +78,7 @@ export default function Home() {
 </div>
 
             </motion.div>
-          </section>
+          </motion.section>
         
   );
 }

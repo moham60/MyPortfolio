@@ -1,7 +1,11 @@
-
+'use client'
 import dynamic from "next/dynamic";
-const EducationSection = dynamic(()=>import("../_components/EducationSection/EducationSection"));
-export default function education() {
+import Loading from "../loading";
+const EducationSection = dynamic(() => import("../_components/EducationSection/EducationSection"), {
+  ssr: false,
+  loading:()=><Loading/>
+});
+export default function Education() {
     return (
       <EducationSection/>
   );

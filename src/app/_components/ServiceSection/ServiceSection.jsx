@@ -11,7 +11,7 @@ import {
   Zap 
 } from "lucide-react";
 import dynamic from "next/dynamic";
-const Card=dynamic(()=>import( "../ServiceCard/ServiceCard"));
+const Card=dynamic(()=>import( "./ServiceCard/ServiceCard"));
 const Title = dynamic(()=>import("../SectionTiitle/Title"));
 
 import { motion } from "framer-motion";
@@ -78,9 +78,9 @@ export default function ServiceSection() {
 
     return (
         <motion.section
-            initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={transition}
+         initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={transition}
             className="px-4 py-16  sm:p-16">
 
             <Title title={"My Services"} />

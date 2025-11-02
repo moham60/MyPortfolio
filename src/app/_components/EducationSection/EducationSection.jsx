@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
-const Title = dynamic(()=>import("../SectionTiitle/Title"));
-const Education=dynamic(()=>import("./EducationCom"));
+'use client'
+import Title from "../SectionTiitle/Title";
+import Education from "./EducationCom";
 const educations = [
   {
     degree: "Diploma in Front-End Development (React & Next.js)",
@@ -44,10 +44,14 @@ const educations = [
     projects: ["PageRank Algorithm Simulation", "Credit Score System"],
   },
 ];
+import { motion } from "framer-motion";
+import { transition } from "../../../../transition";
 
 export default function EducationSection() {
     return (
-        <section className=" px-4 py-16  sm:p-16  min-h-screen">
+        <motion.section   initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={transition} className=" px-4 py-16  sm:p-16  min-h-screen">
         <Title title={"Education Journey"} />
        
         {educations.map(education => (
@@ -64,6 +68,6 @@ export default function EducationSection() {
           
           ))}
         
-    </section>
+    </motion.section>
   );
 }

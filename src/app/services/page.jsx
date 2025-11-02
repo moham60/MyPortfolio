@@ -1,6 +1,11 @@
+'use client'
 import dynamic from "next/dynamic";
-const ServiceSection = dynamic(()=>import("../_components/ServiceSection/ServiceSection"));
-export default function services() {
+import Loading from "../loading";
+const ServiceSection = dynamic(()=>import("../_components/ServiceSection/ServiceSection"), {
+  ssr: false,
+  loading:()=><Loading/>
+});
+export default function Services() {
     return (
       <ServiceSection/>
   );
