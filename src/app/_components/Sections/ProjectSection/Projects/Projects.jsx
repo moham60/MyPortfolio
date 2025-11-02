@@ -59,7 +59,7 @@ const projects = [
     title: "Admin Dashboard",
     languages: ["HTML", "CSS", "JavaScript"],
     desc: "لوحة تحكم تفاعلية مصممة لعرض البيانات والمخططات بطريقة سهلة الاستخدام.",
-    demo: "https://github.com/moham60/template4",
+    demo: "https://moham60.github.io/template4",
     repo: "https://github.com/moham60/template4",
   },
   {
@@ -134,7 +134,7 @@ export default function Projects() {
                   <div className="absolute opacity-0 transition-all duration-300
                    group-hover:opacity-100 inset-0 flex justify-center items-center gap-2 bg-[#00000086]">
                     <a href={project.repo} target="_blank"><FaGithub size={25} className="text-gray-700 hover:text-gray-950 dark:text-white dark:hover:text-gray-400" /></a>
-                    <a href={project.repo} target="_blank"><FaGlobe size={25} className="text-gray-700 hover:text-gray-950 dark:text-white dark:hover:text-gray-400"/></a>
+                    <a href={project.demo} target="_blank"><FaGlobe size={25} className="text-gray-700 hover:text-gray-950 dark:text-white dark:hover:text-gray-400"/></a>
                   </div>
                 </div>
                
