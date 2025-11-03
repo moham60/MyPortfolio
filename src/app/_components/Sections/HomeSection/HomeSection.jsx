@@ -59,7 +59,7 @@ export default function Home() {
   {/* Secondary Button */}
   <a
     target="_blank"
-    href="https://drive.google.com/file/d/1gM01EvZUhY6NPFRRfUxhQlnhRQNkWNul/view?usp=sharing"
+    href="https://docs.google.com/document/d/18EsiaxnTcS9eDxdoMUqw6rsEJ9Y5FCBt/edit?usp=sharing&ouid=107675251266843462451&rtpof=true&sd=true"
     className="min-w-40 px-6 py-3 rounded-xl font-semibold 
     border border-purple-500/40 
     text-purple-600 dark:text-purple-300 
