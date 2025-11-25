@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, A11y,Autoplay } from 'swiper/modules';
+import {  A11y,Autoplay } from 'swiper/modules';
 import project1 from "@images/projectsScreens/ecommerce.png";
 import project2 from "@images/projectsScreens/Quran.png";
 import template2 from "@images/projectsScreens/template2.png";
@@ -102,18 +102,18 @@ export default function Projects() {
         transition={transition}
       >   
             <Swiper
-          modules={[Pagination, A11y, Autoplay]}
+          modules={[ A11y, Autoplay]}
           
           spaceBetween={25}
-          allowTouchMove={false}
+          allowTouchMove={true}
          
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 0,
+            delay: 100,
             disableOnInteraction: false,
             pauseOnMouseEnter:true,
           }}
-          speed={3000}//smoother transition speed
+          speed={2000}//smoother transition speed
        
           
 
@@ -128,9 +128,9 @@ export default function Projects() {
               
           {projects.map(project => (
             <SwiperSlide key={project.title}>
-              <div className="card group cursor-pointer bg-white shadow p-3 rounded-md hover:scale-105 transition-all duration-300 dark:bg-gray-800">
+              <div className="card group cursor-pointer bg-white shadow p-4 rounded-md hover:scale-105 transition-all duration-300 dark:bg-gray-800">
                 <div className="image relative ">
-                  <Image src={project.image} alt={project.title} className="h-[250px] w-full object-cover object-center" />
+                  <Image src={project.image} alt={project.title} className="h-[200px] w-full object-cover object-center rounded" />
                   <div className="absolute opacity-0 transition-all duration-300
                    group-hover:opacity-100 inset-0 flex justify-center items-center gap-2 bg-[#00000086]">
                     <a href={project.repo} target="_blank"><FaGithub size={25} className="text-gray-700 hover:text-gray-950 dark:text-white dark:hover:text-gray-400" /></a>
@@ -141,9 +141,9 @@ export default function Projects() {
                 <div className="text p-2 text-center dark:text-white  my-3">
                   <h3 className=" text-xl md:text-2xl font-extrabold">{project.title}</h3>
                   <div className="flex my-3 items-center justify-evenly">
-                    {project.languages.map(lang => (
-                      <span  className="font-bold "
-                        key={project.desc} >
+                    {project.languages.map((lang,idx) => (
+                      <span   className="font-bold "
+                        key={idx} >
                           {lang}
                        </span>
                      ))}

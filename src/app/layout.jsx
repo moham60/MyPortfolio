@@ -2,7 +2,6 @@ import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import "react-loadly/styles.css";
 import ThemeProvider from "./_components/ThemeProvider";
-import ParticleBackground from "./_components/Particles/ParticleBackground";
 import Navbar from "./_components/navbar/Navbar";
 import Cursor from "./_components/Cursor/Cursor";
 import SocialContact from "./_components/SocialContact/SocialContact";
@@ -37,11 +36,11 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.variable} ${roboto.variable} relative antialiased`}>
         <ThemeProvider>
-          <ParticleBackground />
+          
           <Navbar />
           <Cursor />
           <SocialContact />
-          <main className="dark:bg-[#0F1726] bg-white/85 overflow-hidden">{children}
+          <main className="dark:bg-[#0F1726]  overflow-hidden">{children}
           </main>
           <Footer />
         </ThemeProvider>

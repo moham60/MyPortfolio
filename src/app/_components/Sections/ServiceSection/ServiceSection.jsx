@@ -2,7 +2,6 @@
 import { 
   Code, 
   Monitor, 
-  Server, 
   Database, 
   Plug, 
   Palette, 
@@ -28,12 +27,7 @@ export const services = [
     description:
       "Create modern, dynamic, and user-friendly interfaces using React, Tailwind CSS, and TypeScript for a seamless user experience."
   },
-  {
-    icon: Server,
-    title: "Back-End Development",
-    description:
-      "Develop powerful RESTful APIs with Node.js and Express, managing databases efficiently and ensuring secure server-side logic."
-  },
+
   {
     icon: Database,
     title: "Database Design",
@@ -80,14 +74,14 @@ export default function ServiceSection() {
          initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={transition}
-            className="px-4 py-16  sm:p-16">
+            className="px-4 py-16  sm:px-20  ">
 
             <Title title={"My Services"} />
             <motion.div      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={transition} className="Services my-4 grid md:grid-cols-2 lg:grid-cols-3  gap-7 items-center">
+      transition={transition} className="Services my-4 grid md:grid-cols-2 lg:grid-cols-3 justify-center  gap-7 items-center">
                 {services.map((service,idx) => (
-                    <Card key={idx} title={service.title} icon={<service.icon size={40}  className="dark:bg-purple-500 bg-purple-700 shadow-purple-500 w-10 h-10 rounded-full p-2 shadow-lg  dark:shadow-purple-600  "/>} desc={service.description}/>
+                    <Card key={idx} title={service.title} icon={<service.icon size={20}  className=" bg-purple-400 dark:bg-purple-800  w-10 h-10 rounded-full p-2  "/>} desc={service.description}/>
                 ))}
             </motion.div>
         </motion.section>

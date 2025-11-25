@@ -40,7 +40,10 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           </span>
         </LinkTransition>
        
-        <div className="flex    md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex  items-center   md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+           <div className="toggoleTheme block md:hidden">
+            <ToggoleTheme />
+          </div>
           <button
             type="button"
             onClick={() => {
@@ -55,6 +58,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
               <CiMenuFries size={30} />
             )}
           </button>
+         
         </div>
         <div className="hidden md:flex md:w-[75%] md:justify-end md:items-center  space-x-5">
           {LinkTransitions.map((Link) => (
@@ -71,6 +75,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
             </LinkTransition>
           ))}
 
+        
           <div className="flex  md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
@@ -86,10 +91,11 @@ const [openMobileNav, setopenMobileNav] = useState(false)
                 <CiMenuFries size={30} />
               
             </button>
-          </div>
-          <div className="toggoleTheme">
+            <div className="toggoleTheme">
             <ToggoleTheme />
           </div>
+          </div>
+          
         </div>
       </div>
 
@@ -109,19 +115,17 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           <LinkTransition
             key={Link.href}
         href={Link.href}
-        onClick={()=>setopenMobileNav(false)}
+       
             className={`px-3 py-2 w-full my-3 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
                     ? "bg-gradient-to-r text-white from-violet-700 to-violet-900  "
                     : "dark:text-gray-300 hover:text-white text-black  hover:bg-violet-700 "
                 }`}>
-            {Link.label}
+            <span onClick={()=>setopenMobileNav(false)}>{Link.label}</span>
           </LinkTransition>
     ))}
-          <div className="toggoleTheme mt-4">
- <ToggoleTheme/>
-          </div>
+   
          
         </div>
         

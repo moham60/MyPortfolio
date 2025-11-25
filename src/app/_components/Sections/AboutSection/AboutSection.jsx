@@ -26,31 +26,33 @@ export default function AboutSection() {
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={transition}
-      className=" px-4 py-16  sm:p-16">
+      className=" px-4 py-16  items-center  sm:p-16">
       <Title title={"About Me"}/>
 
       <motion.div initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={transition} className="flex  gap-2 flex-col sm:flex-row items-center">
+      transition={transition} className="flex   justify-center gap-4  flex-col  sm:flex-row items-center">
         {/* صورة شخصية */}
-        <div className="flex w-full sm:w-[29%] md:w-[39%]  justify-center">
-          <Image
+          <div className="w-[80%]  sm:w-[30%]">
+             <Image
             src={myPhoto}
             alt="My Photo"
-            width={300}
-            height={300}
-            className="rounded-2xl shadow-lg"
+            width={250}
+            height={250}
+            className="rounded-2xl mx-auto  shadow-lg"
           />
-        </div>
+       </div>
+         
+     
 
         {/* محتوى التعريف */}
-        <div className="w-full sm:w-[70%] md:w-[60%]">
+        <div className="right flex-1">
           <h2 className="text-4xl text-gray-800 dark:text-white font-semibold mb-4">
             👋 Hi, I'm Mohamed
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-1">
             I’m a passionate{" "}
-            <span className="font-semibold">Front-End Developer</span>
+            <span className="font-semibold">Front-End Developer </span>
             specializing in{" "}
             <span className=" text-purple-700 dark:text-purple-500">
               React, Next.js, and TailwindCSS
@@ -59,7 +61,7 @@ export default function AboutSection() {
             applications.
           </p>
 
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-2">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed ">
             Beyond coding, I’m interested in UI/UX design, open-source
             contributions, and always learning new technologies to improve my
             skills.
@@ -69,7 +71,7 @@ export default function AboutSection() {
       </motion.div>
           <motion.div initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={transition}  className="skills my-6 text-center">
+      transition={transition}  className="skills   text-center">
        <Title title={"Skills"}/>
         <ul className="flex justify-center flex-wrap gap-3">
           {skills.map((skill, idx) => (

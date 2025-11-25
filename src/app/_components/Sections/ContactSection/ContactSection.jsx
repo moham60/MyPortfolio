@@ -11,7 +11,7 @@ export default function ContactSection() {
        initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={transition}
-      className=" px-4 py-16  sm:p-16  min-h-screen  ">
+      className=" px-4 py-10     ">
      
    
          <Title title={"Contact Me"}/>

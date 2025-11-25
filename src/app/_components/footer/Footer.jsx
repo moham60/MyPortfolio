@@ -4,7 +4,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  ">
-      <div className="p-6 md:py-10 max-w-screen-xl mx-auto">
+      <div className="p-6 md:py-5 mx-auto">
         <div className="sm:flex sm:items-center sm:justify-between">
           {/* Logo */}
           <Link

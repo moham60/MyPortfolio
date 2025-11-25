@@ -10,7 +10,7 @@ export default function Home() {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={transition}
-        className="relative px-4 py-16  sm:p-16 h-[88vh]  flex flex-col justify-center ">
+        className="relative px-4 py-16  sm:p-16  flex flex-col justify-center ">
         
         
             <motion.div
