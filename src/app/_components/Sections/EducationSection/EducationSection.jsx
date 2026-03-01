@@ -51,7 +51,7 @@ export default function EducationSection() {
     return (
         <motion.section   initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={transition} className=" px-4 py-16  sm:p-16  min-h-screen">
+                transition={transition} className=" p-4  sm:p-16  ">
         <Title title={"Education Journey"} />
        
         {educations.map(education => (

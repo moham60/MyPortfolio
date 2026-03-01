@@ -10,7 +10,7 @@ export default function Home() {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={transition}
-        className="relative px-4 py-16  sm:p-16  flex flex-col justify-center ">
+        className="relative px-4 py-6  sm:p-16 h-[70vh] md:h-[100vh] flex flex-col justify-center">
         
         
             <motion.div
@@ -45,7 +45,7 @@ export default function Home() {
   </h2>
 </div>
 
-<div className="btns flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+<div className="btns flex flex-col sm:flex-row  items-center justify-center gap-4 mt-8">
   {/* Primary Button */}
   <button
     className="min-w-40 px-6 py-3 rounded-xl font-semibold 
@@ -59,7 +59,7 @@ export default function Home() {
   {/* Secondary Button */}
   <a
     target="_blank"
-    href="https://docs.google.com/document/d/18EsiaxnTcS9eDxdoMUqw6rsEJ9Y5FCBt/edit?usp=sharing&ouid=107675251266843462451&rtpof=true&sd=true"
+    href="https://drive.google.com/file/d/1ykhRD1rkcDx7rFeg204a3EB06J4W2pJa/view?usp=sharing"
     className="min-w-40 px-6 py-3 rounded-xl font-semibold 
     border border-purple-500/40 
     text-purple-600 dark:text-purple-300 

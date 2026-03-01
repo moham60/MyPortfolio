@@ -14,7 +14,7 @@ export default function ProjectSection() {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={transition}
-      className="px-4 py-16   sm:p-16"
+      className="p-4  sm:p-16"
      >
         <Title title={"My Projects"}/>
         <div className="Projects">
