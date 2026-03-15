@@ -3,6 +3,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
 export default function SocialContact() {
     const [open, setOpen] = useState(false);
       const socials = [
@@ -64,10 +65,12 @@ export default function SocialContact() {
     },
    
   ];
-    return (
-        <div className="fixed right-6 bottom-6 z-50">
-              {/* social items */}
-      <div className="flex flex-col items-end gap-3 mb-3">
+
+  return (
+    <div className="fixed right-6 bottom-6 flex flex-col items-end z-50">
+      
+      {/* Social Items Popup */}
+      <div className="flex flex-col items-end gap-3 mb-4 origin-bottom">
         <AnimatePresence>
           {open &&
             socials.map((s, idx) => (
@@ -76,51 +79,56 @@ export default function SocialContact() {
                 href={s.href}
                 target="_blank"
                 rel="noreferrer"
-                initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                transition={{ duration: 0.18, delay: idx * 0.04 }}
-                className="group flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-3 py-2 rounded-full shadow-sm hover:scale-105 transform transition"
+                initial={{ opacity: 0, y: 15, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                transition={{ 
+                  duration: 0.2, 
+                  delay: (socials.length - 1 - idx) * 0.05, 
+                  ease: "easeOut" 
+                }}
+                className="group flex items-center justify-between gap-3 bg-white/80 dark:bg-card/90 backdrop-blur-md border border-border-custom px-4 py-2.5 rounded-full shadow-lg hover:shadow-primary-500/20 hover:-translate-x-1 transition-all duration-300 w-auto"
                 aria-label={s.name}
                 title={s.name}
+                onClick={() => setOpen(false)}
               >
-                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-50 dark:bg-purple-900 text-purple-600 dark:text-purple-300">
-                  {s.svg}
-                </span>
-                <span className="text-sm text-gray-700 dark:text-gray-200 pr-2">
+                <span className="text-sm font-semibold text-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                   {s.name}
+                </span>
+                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 group-hover:bg-primary-600 group-hover:text-white dark:group-hover:bg-primary-500/20 transition-all duration-300">
+                  {s.svg}
                 </span>
               </motion.a>
             ))}
         </AnimatePresence>
       </div>
-              <button
+
+      {/* Main Toggle Button */}
+      <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-label={open ? "Close contacts" : "Open contacts"}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg flex items-center justify-center text-white focus:outline-none focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-600"
+        className="w-14 h-14 rounded-full bg-gradient-to-br from-primary-600 to-blue-600 shadow-xl shadow-primary-500/30 flex items-center justify-center text-white focus:outline-none hover:scale-110 hover:shadow-primary-500/50 transition-all duration-300 z-10"
         title="Contact"
       >
-        {/* Animated plus -> x */}
         <motion.span
           initial={false}
-          animate={{ rotate: open ? 45 : 0, scale: open ? 0.95 : 1 }}
+          animate={{ rotate: open ? 135 : 0 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          className="flex items-center justify-center w-full h-full"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-6 h-6">
-            <motion.path
+            <path
               d="M12 5v14M5 12h14"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              // use opacity to soften when rotated into X
-              initial={false}
-              animate={{ opacity: open ? 0.9 : 1 }}
             />
           </svg>
         </motion.span>
       </button>
-        </div>
-            
+
+    </div>
   );
 }

@@ -15,7 +15,7 @@ export default function LinkTransition({ href, children }) {
 
   return (
     <a href={href} onClick={handleClick}
-      className={clsx('transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium',isActive?"dark:text-purple-400 text-purple-500 bg-purple-600/10 dark:bg-purple-500/10":"dark:text-gray-300 text-gray-600 dark:hover:text-purple-400 hover:text-purple-500 dark:hover:bg-gray-800/60")}
+      className={clsx('transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium',isActive?"dark:text-primary-400 text-primary-600 bg-primary-600/10 dark:bg-primary-500/10":"text-text-secondary dark:hover:text-primary-400 hover:text-primary-600 dark:hover:bg-gray-800/60")}
     >
       {children}
     </a>

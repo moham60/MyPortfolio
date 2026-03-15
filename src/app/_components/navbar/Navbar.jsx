@@ -27,7 +27,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
       initial={{ y: "-100%" }}
       transition={transition}
       animate={{ y: 0 }}
-      className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  fixed w-full z-20 top-0 left-0 right-0 start-0 border-b dark:border-gray-800  border-gray-100  ">
+      className="bg-background shadow-2xl fixed w-full z-20 top-0 left-0 right-0 start-0 border-b border-border-custom">
       <div className=" flex max-w-7xl    items-center justify-between mx-auto p-4">
         <LinkTransition
           href={"/"}
@@ -35,7 +35,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           <span
             className="self-center text-2xl font-extrabold bg-gradient-to-r
           
-          from-violet-800 to-pink-700  bg-clip-text text-transparent">
+          from-primary-600 to-blue-500 bg-clip-text text-transparent">
             Mohamed
           </span>
         </LinkTransition>
@@ -68,8 +68,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
               className={`px-3 py-2 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
-                    ? "bg-gradient-to-r from-violet-700 to-violet-900 text-white"
-                    : "dark:text-gray-300 text-black hover:text-white hover:bg-violet-700 "
+                    ? "bg-gradient-to-r from-primary-600 to-blue-600 text-white shadow-md shadow-primary-500/20"
+                    : "text-text-secondary hover:text-white hover:bg-primary-500"
                 }`}>
               {Link.label}
             </LinkTransition>
@@ -100,13 +100,9 @@ const [openMobileNav, setopenMobileNav] = useState(false)
       </div>
 
       <div
-        className={ `fixed inset-0 min-h-screen    transition-all duration-700  py-10 px-6  ${
+        className={`fixed inset-0 min-h-screen transition-all duration-700 py-10 px-6 ${
           openMobileNav ? "translate-x-0" : "translate-x-[100%]"
-        }    
-
-        dark:bg-gray-800 bg-white 
-        
-          `}>
+        } bg-background`}>
         <button onClick={()=>setopenMobileNav(false)} className="close p-2 flex justify-center items-center bg-gray-700 rounded cursor-pointer hover:bg-gray-500 absolute right-2 top-2">
            <AiOutlineClose size={20} className='text-white dark:text-gray-400' />
         </button>
@@ -119,8 +115,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
             className={`px-3 py-2 w-full my-3 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
-                    ? "bg-gradient-to-r text-white from-violet-700 to-violet-900  "
-                    : "dark:text-gray-300 hover:text-white text-black  hover:bg-violet-700 "
+                    ? "bg-gradient-to-r text-white from-primary-600 to-blue-600 shadow-md shadow-primary-500/20"
+                    : "text-text-secondary hover:text-white hover:bg-primary-500"
                 }`}>
             <span onClick={()=>setopenMobileNav(false)}>{Link.label}</span>
           </LinkTransition>

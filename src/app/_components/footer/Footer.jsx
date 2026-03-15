@@ -2,56 +2,64 @@ import Link from 'next/link';
 import React from 'react'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className=" bg-white shadow-2xl dark:bg-gradient-to-r  dark:from-gray-800 dark:to-gray-950  ">
-      <div className="p-6 md:py-5 mx-auto">
-        <div className="sm:flex sm:items-center sm:justify-between">
+    <footer className="w-full bg-background border-t border-border-custom mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse">
+            className="flex items-center space-x-3 rtl:space-x-reverse transition-transform hover:scale-105 duration-300">
             <span className="text-2xl font-extrabold bg-gradient-to-r 
-             from-violet-800 to-pink-700
+             from-primary-600 to-blue-500
              bg-clip-text text-transparent">
               Mohamed
             </span>
           </Link>
 
           {/* Links */}
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium
-          text-gray-700 dark:text-gray-400 sm:mb-0">
+          <ul className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-text-secondary">
             <li>
               <Link
                 href="/about"
-                className=" me-4 md:me-6 transition">
+                className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
                 About
               </Link>
             </li>
-           
             <li>
-              <a
-                href="#"
-                className="hover:text-violet-400 me-4 md:me-6 transition">
-                Licensing
-              </a>
+              <Link
+                href="/projects"
+                className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+                Projects
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-violet-400 transition">
+              <Link
+                href="/contact"
+                className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
-        <div className="border border-gray-100 dark:border-gray-700 my-5"></div>
+        <div className="h-px w-full bg-border-custom my-6 md:my-8 bg-gradient-to-r from-transparent via-border-custom to-transparent"></div>
+        
         {/* Copyright */}
-        <span className="block text-sm text-gray-700 dark:text-gray-500 sm:text-center">
-          © 2025{" "}
-          <Link href="/" className="hover:text-cyan-400 transition font-medium">
-            Mohamed™
-          </Link>{" "}
-          . All Rights Reserved.
-        </span>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-secondary">
+          <span className="text-center md:text-left">
+            © {currentYear}{" "}
+            <Link href="/" className="font-semibold text-text-primary hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+              Mohamed Abdelwahab
+            </Link>
+            . All Rights Reserved.
+          </span>
+          <span className="flex items-center gap-1.5 font-medium">
+            Built with <span className="text-red-500 hover:scale-125 transition-transform duration-300 cursor-default">❤</span> using Next.js & Tailwind
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -73,15 +73,25 @@ export default function ServiceSection() {
         <motion.section
          initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={transition}
             className="p-4  sm:p-16">
 
             <Title title={"My Services"} />
-            <motion.div      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={transition} className="Services my-4 grid md:grid-cols-2 lg:grid-cols-3 justify-center  gap-7 items-center">
-                {services.map((service,idx) => (
-                    <Card key={idx} title={service.title} icon={<service.icon size={20}  className=" bg-purple-400 dark:bg-purple-800  w-10 h-10 rounded-full p-2  "/>} desc={service.description}/>
+            <motion.div 
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={transition} 
+               className="Services my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-8"
+            >
+                {services.map((service, idx) => (
+                    <Card 
+                      key={idx} 
+                      title={service.title} 
+                      icon={<service.icon className="w-8 h-8 transition-colors duration-300" />} 
+                      desc={service.description}
+                    />
                 ))}
             </motion.div>
         </motion.section>

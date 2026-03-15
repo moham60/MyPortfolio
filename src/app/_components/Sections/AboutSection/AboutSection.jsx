@@ -25,12 +25,14 @@ export default function AboutSection() {
   <motion.section
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={transition}
       className="p-4  sm:p-16">
       <Title title={"About Me"}/>
 
       <motion.div initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={transition} className="flex   justify-center gap-4  flex-col  sm:flex-row items-center">
         {/* صورة شخصية */}
           <div className="w-[80%]  sm:w-[30%]">
@@ -54,7 +56,7 @@ export default function AboutSection() {
             I’m a passionate{" "}
             <span className="font-semibold">Front-End Developer </span>
             specializing in{" "}
-            <span className=" text-purple-700 dark:text-purple-500">
+            <span className=" text-primary-600 dark:text-primary-400">
               React, Next.js, and TailwindCSS
             </span>
             . I love building responsive, modern, and user-friendly web
@@ -71,6 +73,7 @@ export default function AboutSection() {
       </motion.div>
           <motion.div initial={{ opacity: 0, x: -40 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={transition}  className="skills   text-center">
        <Title title={"Skills"}/>
         <ul className="flex justify-center flex-wrap gap-3">

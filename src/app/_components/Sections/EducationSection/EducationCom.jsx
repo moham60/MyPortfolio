@@ -7,6 +7,7 @@ export default function Education({
         <motion.div
                initial={{ opacity: 0, y: -40 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
             transition={transition}
             className="relative p-4"
             
@@ -14,11 +15,12 @@ export default function Education({
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
            transition={transition}
           className="contentEducation">
        {/* Degree & Institution */}
       <div className="mb-3">
-        <h2 className="text-xl font-semibold text-purple-600 dark:text-purple-400">{degree}</h2>
+        <h2 className="text-xl font-semibold text-primary-600 dark:text-primary-400">{degree}</h2>
         <p className="text-sm text-gray-500 dark:text-gray-300">{institution}</p>
             </div>
              {/* Duration & Location */}
@@ -31,12 +33,12 @@ export default function Education({
              {/* Skills */}
       {skills && skills.length > 0 && (
         <div className="mb-4">
-          <h3 className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-2">Skills Learned:</h3>
+          <h3 className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-2">Skills Learned:</h3>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="bg-purple-600/10 text-purple-600  dark:bg-purple-500/10 dark:text-purple-300 text-xs px-3 py-1 rounded-full border dark:border-purple-500/30 border-purple-500/30"
+                className="bg-primary-600/10 text-primary-600  dark:bg-primary-500/10 dark:text-primary-300 text-xs px-3 py-1 rounded-full border dark:border-primary-500/30 border-primary-500/30"
               >
                 {skill}
               </span>
@@ -47,7 +49,7 @@ export default function Education({
             {/* Projects */}
       {projects && projects.length > 0 && (
         <div>
-          <h3 className="text-sm  text-purple-600 dark:text-purple-400 font-medium mb-2">Projects:</h3>
+          <h3 className="text-sm  text-primary-600 dark:text-primary-400 font-medium mb-2">Projects:</h3>
           <ul className="list-disc list-inside text-gray-500 dark:text-gray-300 text-sm space-y-1">
             {projects.map((proj, i) => (
               <li key={i}>{proj}</li>
@@ -60,6 +62,7 @@ export default function Education({
             {/* Line Left */}
         <motion.div initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
            transition={transition}
           className="absolute left-0 rounded top-0 w-1 bg-gray-500 dark:bg-white h-full ">
 

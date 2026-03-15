@@ -6,6 +6,7 @@ import Navbar from "./_components/navbar/Navbar";
 import Cursor from "./_components/Cursor/Cursor";
 import SocialContact from "./_components/SocialContact/SocialContact";
 import Footer from "./_components/footer/Footer";
+import BackgroundShapes from "./_components/BackgroundShapes/BackgroundShapes";
 
 
 // 🧠 Fonts
@@ -34,14 +35,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} ${roboto.variable} relative antialiased`}>
+      <body className={`${montserrat.variable} ${roboto.variable} relative antialiased bg-background text-text-primary`}>
         <ThemeProvider>
           
           <Navbar />
           <Cursor />
           <SocialContact />
-          <main className="dark:bg-[#0F1726]  overflow-hidden">{children}
-          </main>
+          <BackgroundShapes />
+          <main className="relative z-10 overflow-hidden bg-transparent">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from 'next-themes';
-import { Button } from 'flowbite-react';
+
 export default function ToggoleTheme() {
   
   const { theme, setTheme } = useTheme();
@@ -15,7 +15,7 @@ export default function ToggoleTheme() {
     if (!mounted) return null; // يمنع Hydration mismatch
 
     return (
-      <Button
+      <button
         className="cursor-pointer outline-0  "
         onClick={() => {
           setTheme(theme === "light" ? "dark" : "light");
@@ -27,6 +27,6 @@ export default function ToggoleTheme() {
         <Sun className="w-5 h-5 outline-0 text-yellow-300" />
         )}
 
-      </Button>
+      </button>
     );
 }
