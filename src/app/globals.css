@@ -51,7 +51,7 @@
 
 /* الخلفية */
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; /* غامق في الـ dark mode */
+  background: var(--background);
 }
 
 /* المقبض */
@@ -105,7 +105,7 @@ section{
 
 
 h1{
-    font-family: var(--font--roboto),"sans serif";
+    font-family: var(--font-roboto),"sans serif";
     font-weight: 700;
 
 }

@@ -159,7 +159,7 @@ function Project({ project }) {
 
         <div className="flex items-center gap-3 pt-5 border-t border-border-custom mt-2">
           <a 
-            className="flex items-center justify-center flex-1 py-2.5 px-4 bg-text-primary hover:bg-text-secondary text-background hover:text-white rounded-xl text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md" 
+            className="flex items-center justify-center flex-1 py-2.5 px-4 bg-primary-600 hover:bg-primary-500 text-white rounded-xl text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md" 
             href={project.demo} 
             target="_blank" 
             rel="noopener noreferrer"

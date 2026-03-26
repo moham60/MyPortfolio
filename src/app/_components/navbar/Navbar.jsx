@@ -75,32 +75,15 @@ const [openMobileNav, setopenMobileNav] = useState(false)
             </LinkTransition>
           ))}
 
-        
-          <div className="flex  md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              onClick={() => {
-                setopenMobileNav(!openMobileNav);
-              }}
-              className="inline-flex  cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm text-gray-700 dark:text-gray-500 rounded-lg md:hidden "
-              aria-expanded="false">
-              <span className="sr-only">Open main menu</span>
-              
-               
-             
-                <CiMenuFries size={30} />
-              
-            </button>
-            <div className="toggoleTheme">
+          <div className="toggoleTheme">
             <ToggoleTheme />
-          </div>
           </div>
           
         </div>
       </div>
 
       <div
-        className={`fixed inset-0 min-h-screen transition-all duration-700 py-10 px-6 ${
+        className={`fixed inset-0 min-h-screen transition-all duration-700 py-10 px-6 z-30 ${
           openMobileNav ? "translate-x-0" : "translate-x-[100%]"
         } bg-background`}>
         <button onClick={()=>setopenMobileNav(false)} className="close p-2 flex justify-center items-center bg-gray-700 rounded cursor-pointer hover:bg-gray-500 absolute right-2 top-2">
