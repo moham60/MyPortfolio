@@ -31,7 +31,7 @@ export default function BackgroundShapes() {
       {/* Bottom Left Blob */}
       <div 
         className={`absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full opacity-50 blur-[100px] animate-blob animation-delay-4000 ${
-          theme === 'dark' ? 'bg-indigo-600/30' : 'bg-indigo-300/60'
+          theme === 'dark' ? 'bg-primary-600/30' : 'bg-primary-300/60'
         }`}
       ></div>
     </div>

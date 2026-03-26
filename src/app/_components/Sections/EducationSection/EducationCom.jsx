@@ -64,11 +64,11 @@ export default function Education({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
            transition={transition}
-          className="absolute left-0 rounded top-0 w-1 bg-gray-500 dark:bg-white h-full ">
+          className="absolute left-0 rounded top-0 w-1 bg-primary-500 h-full ">
 
         </motion.div>
         <div className="absolute left-[-5px]  flex justify-center bottom-[-18px]  ">
-          <div className="circe border bg-transparent  w-3 h-3 rounded-full border-gray-600 dark:border-gray-300 ">
+          <div className="circle border bg-transparent  w-3 h-3 rounded-full border-primary-500 ">
             
               </div>
             </div>
