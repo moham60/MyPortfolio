@@ -13,7 +13,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={transition}
-        className="relative px-4 py-6 sm:px-16 sm:py-0 min-h-screen flex items-center">
+        className="relative px-4 pt-24 pb-6 sm:px-16 sm:pt-0 sm:py-0 min-h-screen flex items-center">
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
 
