@@ -15,25 +15,23 @@ export default function BackgroundShapes() {
   return (
     <div className="fixed inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
       {/* Top Left Blob */}
-      <div 
-        className={`absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full opacity-60 blur-[80px] animate-blob ${
-          theme === 'dark' ? 'bg-primary-600/30' : 'bg-primary-300/60'
+      <div
+        className={`absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full opacity-40 blur-[80px] animate-blob ${
+          theme === "dark" ? "bg-primary-600/40" : "bg-primary-300/50"
         }`}
-      ></div>
-
+      />
       {/* Top Right Blob */}
-      <div 
-        className={`absolute top-[0%] -right-[10%] w-[40%] h-[40%] rounded-full opacity-60 blur-[80px] animate-blob animation-delay-2000 ${
-          theme === 'dark' ? 'bg-blue-600/30' : 'bg-blue-300/60'
+      <div
+        className={`absolute top-[0%] -right-[10%] w-[40%] h-[40%] rounded-full opacity-30 blur-[80px] animate-blob animation-delay-2000 ${
+          theme === "dark" ? "bg-primary-300/20" : "bg-primary-100/60"
         }`}
-      ></div>
-
-      {/* Bottom Left Blob */}
-      <div 
-        className={`absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full opacity-50 blur-[100px] animate-blob animation-delay-4000 ${
-          theme === 'dark' ? 'bg-indigo-600/30' : 'bg-indigo-300/60'
+      />
+      {/* Bottom Blob */}
+      <div
+        className={`absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] rounded-full opacity-30 blur-[100px] animate-blob animation-delay-4000 ${
+          theme === "dark" ? "bg-primary-600/20" : "bg-primary-200/40"
         }`}
-      ></div>
+      />
     </div>
   );
 }

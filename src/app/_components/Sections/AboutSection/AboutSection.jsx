@@ -4,6 +4,8 @@ import { transition } from "../../../../../transition";
 import { FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
 import { RiDatabase2Line } from "react-icons/ri";
+import Image from "next/image";
+import myPhoto from "@images/myPhoto.jpg";
 import Title from "../../SectionTiitle/Title";
 
 const skills = [
@@ -39,34 +41,54 @@ export default function AboutSection() {
       className="p-4 sm:p-16">
       <Title title={"About Me"} />
 
+      {/* Bio: photo + text side by side */}
       <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={transition}
-        className="max-w-2xl mx-auto text-center md:text-left">
-        <h2 className="text-3xl font-semibold mb-4" style={{ color: "var(--color-text-primary)" }}>
-          👋 Hi, I&apos;m Mohamed
-        </h2>
-        <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-secondary)" }}>
-          I&apos;m a passionate{" "}
-          <span className="font-semibold" style={{ color: "var(--color-text-primary)" }}>
-            Front-End Developer
-          </span>{" "}
-          specializing in{" "}
-          <span className="font-semibold" style={{ color: "var(--color-neon-blue)" }}>
-            React, Next.js, and TailwindCSS
-          </span>
-          . I love building responsive, modern, and user-friendly web applications.
-        </p>
-        <p className="leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-          Beyond coding, I&apos;m interested in UI/UX design, open-source contributions,
-          and always learning new technologies to improve my skills.
-        </p>
+        className="flex flex-col sm:flex-row items-center gap-10 max-w-4xl mx-auto mt-8">
+
+        {/* Photo */}
+        <div className="flex-shrink-0">
+          <div
+            className="rounded-full p-1 shadow-2xl"
+            style={{ background: "linear-gradient(135deg, var(--primary-600), var(--primary-300))" }}>
+            <Image
+              src={myPhoto}
+              alt="Mohamed Abdelwahab"
+              width={220}
+              height={220}
+              className="rounded-full object-cover w-44 h-44 md:w-52 md:h-52"
+            />
+          </div>
+        </div>
+
+        {/* Text */}
+        <div className="text-center sm:text-left">
+          <h2 className="text-3xl font-semibold mb-4" style={{ color: "var(--color-text-primary)" }}>
+            👋 Hi, I&apos;m Mohamed
+          </h2>
+          <p className="leading-relaxed mb-3" style={{ color: "var(--color-text-secondary)" }}>
+            I&apos;m a passionate{" "}
+            <span className="font-semibold" style={{ color: "var(--color-text-primary)" }}>
+              Front-End Developer
+            </span>{" "}
+            specializing in{" "}
+            <span className="font-semibold" style={{ color: "var(--color-primary)" }}>
+              React, Next.js, and TailwindCSS
+            </span>
+            . I love building responsive, modern, and user-friendly web applications.
+          </p>
+          <p className="leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
+            Beyond coding, I&apos;m interested in UI/UX design, open-source contributions,
+            and always learning new technologies to improve my skills.
+          </p>
+        </div>
       </motion.div>
 
       {/* Skills Mini Cards */}
-      <div className="skills mt-12 text-center">
+      <div className="skills mt-16 text-center">
         <Title title={"Skills"} />
         <ul className="flex justify-center flex-wrap gap-4 mt-4">
           {skills.map((skill, idx) => (
@@ -81,18 +103,18 @@ export default function AboutSection() {
               className="flex flex-col items-center gap-2 px-4 py-3 rounded-xl cursor-pointer
                 border transition-all duration-300 min-w-[80px]"
               style={{
-                background: "var(--color-surface)",
-                borderColor: "var(--color-border)",
+                background: "var(--card)",
+                borderColor: "var(--border-custom)",
                 color: "var(--color-text-secondary)",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--color-neon-blue)";
-                e.currentTarget.style.boxShadow = "0 0 12px var(--color-neon-blue)";
+                e.currentTarget.style.borderColor = "var(--color-primary)";
+                e.currentTarget.style.boxShadow = "0 0 12px color-mix(in srgb, var(--color-primary) 40%, transparent)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "var(--color-border)";
-                e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+                e.currentTarget.style.borderColor = "var(--border-custom)";
+                e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.10)";
               }}
             >
               {skill.icon}

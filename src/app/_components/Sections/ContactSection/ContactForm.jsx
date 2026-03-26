@@ -79,7 +79,8 @@ export default function ContactForm() {
           <Button 
             type="submit" 
             disabled={isSubmitting}
-            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-blue-600 py-3.5 px-6 text-sm font-bold text-white shadow-lg shadow-primary-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:from-blue-600 hover:to-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 px-6 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:opacity-90 focus:outline-none focus:ring-4 focus:ring-primary-500/30 disabled:opacity-70 disabled:cursor-not-allowed"
+            style={{ background: "var(--color-primary)" }}
           >
             {isSubmitting ? (
               <span className="flex items-center gap-2">
