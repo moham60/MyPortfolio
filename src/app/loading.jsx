@@ -1,10 +1,11 @@
+'use client'
 import { LogoSpinLoader } from "react-loadly";
 
 export default function Loading() {
     return (
       <div className="h-screen flex justify-center items-center">
       <LogoSpinLoader
-        color="#064746"
+        color="#7c3aed"
         size={50}
         speed={1}
         loadingText="Loading..."

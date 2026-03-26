@@ -40,7 +40,7 @@ export default function Home() {
       Modern Web Apps
     </span>{" "}
     with{" "}
-    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
+    <span className="text-primary-600 dark:text-primary-400 font-semibold">
       React & Next.js
     </span>{" "}
     ⚡

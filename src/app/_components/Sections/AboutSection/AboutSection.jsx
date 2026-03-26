@@ -49,10 +49,10 @@ export default function AboutSection() {
 
         {/* محتوى التعريف */}
         <div className="right flex-1">
-          <h2 className="text-4xl text-gray-800 dark:text-white font-semibold mb-4">
+          <h2 className="text-4xl text-text-primary font-semibold mb-4">
             👋 Hi, I'm Mohamed
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-1">
+          <p className="text-text-secondary leading-relaxed mb-1">
             I’m a passionate{" "}
             <span className="font-semibold">Front-End Developer </span>
             specializing in{" "}
@@ -63,7 +63,7 @@ export default function AboutSection() {
             applications.
           </p>
 
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed ">
+          <p className="text-text-secondary leading-relaxed ">
             Beyond coding, I’m interested in UI/UX design, open-source
             contributions, and always learning new technologies to improve my
             skills.

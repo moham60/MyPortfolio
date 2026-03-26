@@ -21,15 +21,15 @@ export default function Education({
        {/* Degree & Institution */}
       <div className="mb-3">
         <h2 className="text-xl font-semibold text-primary-600 dark:text-primary-400">{degree}</h2>
-        <p className="text-sm text-gray-500 dark:text-gray-300">{institution}</p>
+        <p className="text-sm text-text-secondary">{institution}</p>
             </div>
              {/* Duration & Location */}
-      <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-4">
+      <div className="flex justify-between text-sm text-text-secondary mb-4">
         <span>{duration}</span>
         {location && <span>{location}</span>}
             </div>
              {/* Description */}
-            <p className="text-gray-500 dark:text-gray-300 mb-4 leading-relaxed">{description}</p>
+            <p className="text-text-secondary mb-4 leading-relaxed">{description}</p>
              {/* Skills */}
       {skills && skills.length > 0 && (
         <div className="mb-4">
@@ -50,7 +50,7 @@ export default function Education({
       {projects && projects.length > 0 && (
         <div>
           <h3 className="text-sm  text-primary-600 dark:text-primary-400 font-medium mb-2">Projects:</h3>
-          <ul className="list-disc list-inside text-gray-500 dark:text-gray-300 text-sm space-y-1">
+          <ul className="list-disc list-inside text-text-secondary text-sm space-y-1">
             {projects.map((proj, i) => (
               <li key={i}>{proj}</li>
             ))}
@@ -72,7 +72,7 @@ export default function Education({
             
               </div>
             </div>
-            <hr className="dark:text-gray-500 text-gray-300 absolute bottom-[-5px] w-full"/>
+            <hr className="text-border-custom absolute bottom-[-5px] w-full"/>
         </motion.div>
   );
 }

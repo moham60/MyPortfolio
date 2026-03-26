@@ -49,7 +49,7 @@ const [openMobileNav, setopenMobileNav] = useState(false)
             onClick={() => {
               setopenMobileNav(!openMobileNav);
             }}
-            className="inline-flex  cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm text-gray-700 dark:text-gray-500 rounded-lg md:hidden "
+            className="inline-flex  cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm text-text-secondary rounded-lg md:hidden "
             aria-expanded="false">
             <span className="sr-only">Open main menu</span>
             {openMobileNav ? (
@@ -87,8 +87,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
         className={`fixed inset-0 min-h-screen transition-all duration-700 py-10 px-6 ${
           openMobileNav ? "translate-x-0" : "translate-x-[100%]"
         } bg-background`}>
-        <button onClick={()=>setopenMobileNav(false)} className="close p-2 flex justify-center items-center bg-gray-700 rounded cursor-pointer hover:bg-gray-500 absolute right-2 top-2">
-           <AiOutlineClose size={20} className='text-white dark:text-gray-400' />
+        <button onClick={()=>setopenMobileNav(false)} className="close p-2 flex justify-center items-center bg-card border border-border-custom rounded cursor-pointer hover:bg-border-custom absolute right-2 top-2">
+           <AiOutlineClose size={20} className='text-text-primary' />
         </button>
         <div className="links mt-10 flex flex-col">
     {LinkTransitions.map((Link) => (
