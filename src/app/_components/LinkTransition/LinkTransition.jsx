@@ -2,21 +2,18 @@
 import clsx from "clsx";
 import { usePathname, useRouter } from "next/navigation";
 
-export default function LinkTransition({ href, children }) {
+export default function LinkTransition({ href, children, className, style }) {
   const router = useRouter();
-  const pathname = usePathname();//to get current path
+  const pathname = usePathname();
   const handleClick = (e) => {
     e.preventDefault();
     document.startViewTransition(() => {
       router.push(href);
     });
   };
-  const isActive = pathname == href;
 
   return (
-    <a href={href} onClick={handleClick}
-      className={clsx('transition-all duration-300 px-3 py-2 rounded-md text-sm font-medium',isActive?"dark:text-primary-400 text-primary-600 bg-primary-600/10 dark:bg-primary-500/10":"text-text-secondary dark:hover:text-primary-400 hover:text-primary-600 dark:hover:bg-gray-800/60")}
-    >
+    <a href={href} onClick={handleClick} className={clsx("transition-all duration-300", className)} style={style}>
       {children}
     </a>
   );

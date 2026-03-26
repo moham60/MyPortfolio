@@ -3,77 +3,135 @@
 import { motion } from "motion/react";
 import { transition } from "../../../../../transition";
 import Link from "next/link";
+
+const floatTransition = { duration: 3, repeat: Infinity, ease: "easeInOut" };
+
 export default function Home() {
     return (
-    
       <motion.section
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={transition}
-        className="relative px-4 py-6 sm:p-16 h-[70vh] md:h-[100vh] flex flex-col justify-center">
-        
-        
-            <motion.div
-              className="flex flex-col items-center  w-full justify-center gap-5"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={transition}>
-            <div className="title text-center relative">
-  <h1
-    className="text-2xl md:text-6xl font-extrabold mb-4 
-    bg-gradient-to-r from-primary-600 to-blue-500
-    dark:from-primary-400 dark:to-blue-400
-    bg-clip-text text-transparent"
-  >
-    Mohamed Abdelwahab
-  </h1>
+        className="relative px-4 pt-24 pb-6 sm:px-16 sm:pt-0 sm:py-0 min-h-screen flex items-center">
 
-  <h2 className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto">
-    Passionate{" "}
-    <span className="text-primary-600 dark:text-primary-400 font-semibold">
-      MERN Stack Developer
-    </span>{" "}
-    Building{" "}
-    <span className="text-blue-600 dark:text-blue-400 font-semibold">
-      Modern Web Apps
-    </span>{" "}
-    with{" "}
-    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
-      React & Next.js
-    </span>{" "}
-    ⚡
-  </h2>
-</div>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
 
-<div className="btns flex flex-col sm:flex-row  items-center justify-center gap-4 mt-8">
-  {/* Primary Button */}
-  <button
-    className="min-w-40 px-6 py-3 rounded-xl font-semibold 
-    bg-gradient-to-r from-primary-600 to-blue-600 
-    hover:from-blue-600 hover:to-primary-600 
-    text-white shadow-lg shadow-primary-500/25 transition-all duration-300"
-  >
-    <Link href={'/projects'}>View My Work</Link>
-  </button>
+          {/* Left: Info */}
+          <motion.div
+            className="flex-1 flex flex-col gap-6 text-center md:text-left"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={transition}>
 
-  {/* Secondary Button */}
-  <a
-    target="_blank"
-    href="https://drive.google.com/file/d/1ykhRD1rkcDx7rFeg204a3EB06J4W2pJa/view?usp=sharing"
-    className="min-w-40 px-6 py-3 rounded-xl font-semibold 
-    border border-primary-500/30 
-    text-primary-600 dark:text-primary-400 
-    hover:bg-primary-50 dark:hover:bg-primary-500/10 
-    transition-all duration-300 text-center"
-  >
-    Download CV
-  </a>
-</div>
+            <h1
+              className="text-3xl md:text-6xl font-extrabold leading-tight"
+              style={{ color: "var(--color-text-primary)" }}>
+              Mohamed{" "}
+              <span style={{ color: "var(--color-primary)" }}>Abdelwahab</span>
+            </h1>
 
-            </motion.div>
-          </motion.section>
-        
-  );
+            <h2 className="text-lg md:text-2xl" style={{ color: "var(--color-text-secondary)" }}>
+              Passionate{" "}
+              <span className="font-semibold" style={{ color: "var(--color-primary)" }}>
+                MERN Stack Developer
+              </span>{" "}
+              building modern web apps with{" "}
+              <span className="font-semibold" style={{ color: "var(--color-primary)" }}>
+                React &amp; Next.js
+              </span>{" "}
+              ⚡
+            </h2>
+
+            <p className="text-base leading-relaxed max-w-lg mx-auto md:mx-0" style={{ color: "var(--color-text-secondary)" }}>
+              I&apos;m a passionate <strong style={{ color: "var(--color-text-primary)" }}>Front-End Developer</strong> specializing in{" "}
+              <span style={{ color: "var(--color-primary)" }}>React, Next.js, and TailwindCSS</span>.
+              I love building responsive, modern, and user-friendly web applications.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center md:items-start gap-4">
+              <Link
+                href="/projects"
+                className="min-w-40 px-6 py-3 rounded-xl font-semibold text-center text-white
+                  shadow-lg transition-all duration-300 hover:scale-105 hover:opacity-90"
+                style={{ background: "var(--color-primary)" }}>
+                View My Work
+              </Link>
+
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/1ykhRD1rkcDx7rFeg204a3EB06J4W2pJa/view?usp=sharing"
+                className="min-w-40 px-6 py-3 rounded-xl font-semibold text-center
+                  border-2 transition-all duration-300 hover:scale-105"
+                style={{
+                  borderColor: "var(--color-primary)",
+                  color: "var(--color-primary)",
+                }}>
+                Download CV
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right: Decorative floating element */}
+          <motion.div
+            className="flex-shrink-0 flex items-center justify-center"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={transition}>
+
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+
+              {/* Glowing background blur */}
+              <div
+                className="absolute inset-0 rounded-full blur-3xl opacity-20"
+                style={{ background: "radial-gradient(circle, var(--primary-500), transparent 70%)" }}
+              />
+
+              {/* Center initials circle */}
+              <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                  w-36 h-36 md:w-44 md:h-44 rounded-full flex items-center justify-center shadow-2xl"
+                style={{ background: "linear-gradient(135deg, var(--primary-600), var(--primary-300))" }}>
+                <span className="text-white text-4xl md:text-5xl font-extrabold select-none">MA</span>
+              </div>
+
+              {/* Floating card — top right: Years */}
+              <motion.div
+                animate={{ y: [-8, 8, -8] }}
+                transition={{ ...floatTransition, duration: 3 }}
+                className="absolute top-0 right-0 rounded-2xl px-4 py-3 shadow-lg border"
+                style={{ background: "var(--card)", borderColor: "var(--border-custom)" }}>
+                <div className="text-2xl font-extrabold" style={{ color: "var(--color-primary)" }}>2+</div>
+                <div className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>Years Exp.</div>
+              </motion.div>
+
+              {/* Floating card — bottom left: Projects */}
+              <motion.div
+                animate={{ y: [8, -8, 8] }}
+                transition={{ ...floatTransition, duration: 3.5 }}
+                className="absolute bottom-0 left-0 rounded-2xl px-4 py-3 shadow-lg border"
+                style={{ background: "var(--card)", borderColor: "var(--border-custom)" }}>
+                <div className="text-2xl font-extrabold" style={{ color: "var(--color-primary)" }}>20+</div>
+                <div className="text-xs font-medium" style={{ color: "var(--color-text-secondary)" }}>Projects</div>
+              </motion.div>
+
+              {/* Floating badge — top left: Stack */}
+              <motion.div
+                animate={{ y: [-5, 5, -5] }}
+                transition={{ ...floatTransition, duration: 4 }}
+                className="absolute top-4 left-0 rounded-2xl px-4 py-3 shadow-lg border"
+                style={{ background: "var(--card)", borderColor: "var(--border-custom)" }}>
+                <div className="text-2xl text-center">⚡</div>
+                <div className="text-xs font-medium text-center" style={{ color: "var(--color-text-secondary)" }}>MERN Stack</div>
+              </motion.div>
+
+            </div>
+          </motion.div>
+
+        </div>
+      </motion.section>
+    );
 }

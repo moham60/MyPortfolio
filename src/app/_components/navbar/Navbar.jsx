@@ -33,9 +33,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           href={"/"}
           className="flex items-center space-x-3 rtl:space-x-reverse">
           <span
-            className="self-center text-2xl font-extrabold bg-gradient-to-r
-          
-          from-primary-600 to-blue-500 bg-clip-text text-transparent">
+            className="self-center text-2xl font-extrabold"
+            style={{ color: "var(--color-primary)" }}>
             Mohamed
           </span>
         </LinkTransition>
@@ -68,9 +67,10 @@ const [openMobileNav, setopenMobileNav] = useState(false)
               className={`px-3 py-2 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
-                    ? "bg-gradient-to-r from-primary-600 to-blue-600 text-white shadow-md shadow-primary-500/20"
-                    : "text-text-secondary hover:text-white hover:bg-primary-500"
-                }`}>
+                    ? "font-semibold border-b-2"
+                    : "text-text-secondary hover:text-primary-500"
+                }`}
+              style={pathname === Link.href ? { color: "var(--color-primary)", borderColor: "var(--color-primary)" } : {}}>
               {Link.label}
             </LinkTransition>
           ))}
@@ -115,9 +115,10 @@ const [openMobileNav, setopenMobileNav] = useState(false)
             className={`px-3 py-2 w-full my-3 rounded transition-colors duration-300
                 ${
                   pathname === Link.href
-                    ? "bg-gradient-to-r text-white from-primary-600 to-blue-600 shadow-md shadow-primary-500/20"
-                    : "text-text-secondary hover:text-white hover:bg-primary-500"
-                }`}>
+                    ? "font-semibold border-b-2"
+                    : "text-text-secondary hover:text-primary-500"
+                }`}
+              style={pathname === Link.href ? { color: "var(--color-primary)", borderColor: "var(--color-primary)" } : {}}>
             <span onClick={()=>setopenMobileNav(false)}>{Link.label}</span>
           </LinkTransition>
     ))}

@@ -103,7 +103,8 @@ export default function Projects() {
       <motion.button 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="mt-8 px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-blue-600 dark:hover:bg-blue-500 flex items-center gap-2" 
+        className="mt-8 px-8 py-3.5 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+        style={{ background: "var(--color-primary)" }}
         onClick={() => setShow(!show)}
       >
         {show ? "Show Less" : "View All Projects"}
@@ -159,7 +160,8 @@ function Project({ project }) {
 
         <div className="flex items-center gap-3 pt-5 border-t border-border-custom mt-2">
           <a 
-            className="flex items-center justify-center flex-1 py-2.5 px-4 bg-text-primary hover:bg-text-secondary text-background hover:text-white rounded-xl text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md" 
+            className="flex items-center justify-center flex-1 py-2.5 px-4 text-white rounded-xl text-sm font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:opacity-90" 
+            style={{ background: "var(--color-primary)" }}
             href={project.demo} 
             target="_blank" 
             rel="noopener noreferrer"
@@ -168,7 +170,8 @@ function Project({ project }) {
             Live Demo
           </a>
           <a 
-            className="flex items-center justify-center flex-1 py-2.5 px-4 bg-card hover:bg-border-custom text-text-primary border-2 border-border-custom rounded-xl text-sm font-bold transition-all duration-300" 
+            className="flex items-center justify-center flex-1 py-2.5 px-4 bg-card rounded-xl text-sm font-bold transition-all duration-300 border-2 hover:opacity-80"
+            style={{ borderColor: "var(--color-primary)", color: "var(--color-primary)" }}
             href={project.repo} 
             target="_blank" 
             rel="noopener noreferrer"

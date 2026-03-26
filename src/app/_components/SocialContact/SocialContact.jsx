@@ -108,7 +108,8 @@ export default function SocialContact() {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         aria-label={open ? "Close contacts" : "Open contacts"}
-        className="w-14 h-14 rounded-full bg-gradient-to-br from-primary-600 to-blue-600 shadow-xl shadow-primary-500/30 flex items-center justify-center text-white focus:outline-none hover:scale-110 hover:shadow-primary-500/50 transition-all duration-300 z-10"
+        className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-white focus:outline-none hover:scale-110 transition-all duration-300 z-10"
+        style={{ background: "var(--color-primary)" }}
         title="Contact"
       >
         <motion.span

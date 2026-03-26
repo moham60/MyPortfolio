@@ -3,31 +3,72 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* === PREMIUM UI COLOR PALETTE === */
-:root {
-  /* Light Mode Values */
-  --background: #f8fafc;
-  --card: #ffffff;
-  --border-custom: #e2e8f0;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
+/* === COLOR PALETTE === */
 
-  /* Primary Brand Colors (Premium Indigo/Blue Theme) */
-  --primary-50: #eef2ff;
-  --primary-100: #e0e7ff;
-  --primary-300: #a5b4fc;
-  --primary-500: #6366f1;
-  --primary-600: #4f46e5;
-  --primary-900: #312e81;
+/* 🌞 Light Theme */
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F8FAFC;
+  --color-surface: #F1F5F9;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+
+  --color-primary: #1AA076;
+  --color-accent: #358BE4;
+
+  --color-border: #E5E7EB;
+
+  --color-hover: #0D7A5F;
+  --color-active: #0D7A5F;
+
+  /* Mapped aliases for component compatibility */
+  --background: var(--color-bg);
+  --card: var(--color-surface);
+  --border-custom: var(--color-border);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --accent: var(--color-primary);
+
+  /* Primary palette — teal/green */
+  --primary-50: #E6F7F2;
+  --primary-100: #B3E8D9;
+  --primary-300: #4DC9A8;
+  --primary-500: #1AA076;
+  --primary-600: #0D7A5F;
+  --primary-900: #063D30;
 }
 
+/* 🌙 Dark Theme */
 .dark {
-  /* Dark Mode Values */
-  --background: #0f1726;
-  --card: #131d30;
-  --border-custom: #1e2e4a;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --color-bg: #111827;
+  --color-bg-secondary: #1F2937;
+  --color-surface: #1F2937;
+
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+
+  --color-primary: #00ffae;
+  --color-accent: #60A5FA;
+
+  --color-border: #374151;
+
+  --color-hover: #10B981;
+  --color-active: #10B981;
+
+  --background: var(--color-bg);
+  --card: var(--color-surface);
+  --border-custom: var(--color-border);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --accent: var(--color-primary);
+
+  --primary-50: #052E1C;
+  --primary-100: #0A4A2E;
+  --primary-300: #10B981;
+  --primary-500: #00ffae;
+  --primary-600: #10B981;
+  --primary-900: #052E1C;
 }
 
 @theme {
@@ -36,7 +77,12 @@
   --color-border-custom: var(--border-custom);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  
+
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-hover: var(--color-hover);
+  --color-active: var(--color-active);
+
   --color-primary-50: var(--primary-50);
   --color-primary-100: var(--primary-100);
   --color-primary-300: var(--primary-300);
@@ -46,12 +92,12 @@
 }
 /* للـ Scrollbar كله */
 ::-webkit-scrollbar {
-  width: 8px; /* عرض الـ scrollbar */
+  width: 8px;
 }
 
 /* الخلفية */
 ::-webkit-scrollbar-track {
-  background: #1a1a1a; /* غامق في الـ dark mode */
+  background: #1a1a1a;
 }
 
 /* المقبض */
@@ -94,6 +140,9 @@
   overflow-x: hidden;
   position: relative;
   z-index: 1;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 section{
   position: relative;

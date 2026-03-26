@@ -12,9 +12,7 @@ export default function Footer() {
           <Link
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse transition-transform hover:scale-105 duration-300">
-            <span className="text-2xl font-extrabold bg-gradient-to-r 
-             from-primary-600 to-blue-500
-             bg-clip-text text-transparent">
+            <span className="text-2xl font-extrabold" style={{ color: "var(--color-primary)" }}>
               Mohamed
             </span>
           </Link>
