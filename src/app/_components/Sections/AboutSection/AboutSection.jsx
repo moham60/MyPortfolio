@@ -51,22 +51,18 @@ export default function AboutSection() {
 
         {/* Photo */}
         <div className="flex-shrink-0">
-          {/* Outer gradient diamond border */}
+          {/* Outer gradient square border */}
           <div
-            className="w-52 h-52 md:w-60 md:h-60 flex items-center justify-center shadow-2xl"
+            className="p-1 rounded-2xl shadow-2xl"
             style={{
               background: "linear-gradient(135deg, #7c3aed, #06b6d4, #10b981, #f59e0b)",
-              clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
             }}>
-            {/* Inner photo — slightly smaller to show the gradient border */}
-            <div
-              className="w-[93%] h-[93%] overflow-hidden"
-              style={{ clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" }}>
+            <div className="w-56 h-56 md:w-68 md:h-68 rounded-xl overflow-hidden">
               <Image
                 src={myPhoto}
                 alt="Mohamed Abdelwahab"
-                width={240}
-                height={240}
+                width={280}
+                height={280}
                 className="w-full h-full object-cover"
               />
             </div>
