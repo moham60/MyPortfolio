@@ -3,30 +3,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* === PREMIUM UI COLOR PALETTE === */
+/* === COLOR PALETTE === */
 :root {
   /* Light Mode Values */
-  --background: #f8fafc;
-  --card: #ffffff;
+  --background: #ffffff;
+  --card: #f8fafc;
   --border-custom: #e2e8f0;
   --text-primary: #0f172a;
   --text-secondary: #475569;
+  --accent: #8b5cf6;
 
-  /* Primary Brand Colors (Premium Indigo/Blue Theme) */
-  --primary-50: #eef2ff;
-  --primary-100: #e0e7ff;
-  --primary-300: #a5b4fc;
-  --primary-500: #6366f1;
-  --primary-600: #4f46e5;
-  --primary-900: #312e81;
+  /* Primary Brand Colors (Blue Theme) */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-300: #93c5fd;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-900: #1e3a8a;
 }
 
 .dark {
   /* Dark Mode Values */
-  --background: #0f1726;
-  --card: #131d30;
-  --border-custom: #1e2e4a;
-  --text-primary: #f8fafc;
+  --background: #0f172a;
+  --card: #1e293b;
+  --border-custom: #334155;
+  --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
 }
 
