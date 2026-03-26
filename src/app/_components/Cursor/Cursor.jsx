@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 
 export default function Cursor() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isTouch, setIsTouch] = useState(true);
 
-useEffect(() => {
+  useEffect(() => {
+    // Show custom cursor only on devices with a precise pointer (laptop/desktop)
+    setIsTouch(window.matchMedia("(pointer: coarse)").matches);
+
     const mouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
@@ -13,6 +17,8 @@ useEffect(() => {
     window.addEventListener("mousemove", mouseMove);
     return () => window.removeEventListener("mousemove", mouseMove);
   }, []);
+
+  if (isTouch) return null;
 
   return (
     <>
