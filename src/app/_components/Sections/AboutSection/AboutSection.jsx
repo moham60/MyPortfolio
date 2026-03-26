@@ -2,9 +2,8 @@
 import { motion } from "framer-motion";
 import { transition } from "../../../../../transition";
 import { FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
 import { RiDatabase2Line } from "react-icons/ri";
-import { TbBrandExpress } from "react-icons/tb";
 import Title from "../../SectionTiitle/Title";
 
 const skills = [
@@ -15,7 +14,7 @@ const skills = [
   { icon: <SiNextdotjs size={32} />, name: "Next.js" },
   { icon: <SiTailwindcss size={32} color="#06B6D4" />, name: "Tailwind" },
   { icon: <FaNodeJs size={32} color="#68A063" />, name: "Node.js" },
-  { icon: <TbBrandExpress size={32} />, name: "Express" },
+  { icon: <SiExpress size={32} />, name: "Express" },
   { icon: <SiMongodb size={32} color="#47A248" />, name: "MongoDB" },
   { icon: <FaGithub size={32} />, name: "GitHub" },
   { icon: <RiDatabase2Line size={32} color="#2563EB" />, name: "SQL" },
