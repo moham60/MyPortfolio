@@ -7,21 +7,23 @@ import { useRef, useState } from 'react';
 export default function ContactForm() {
     const form = useRef();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState(null); // 'success' | 'error' | null
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatus(null);
     emailjs.sendForm(
       'service_fzfcbj6', //service ID
       'template_xof4q4s', //template ID
       form.current,
       'sYtijejmht5GSlUnQ'//public key
     ).then(() => {
-       alert("✅ Message sent successfully!");
+       setStatus('success');
        form.current.reset();
        setIsSubmitting(false);
-    }, (err) => {
-      alert("❌ Failed to send message. Try again.");
+    }, () => {
+      setStatus('error');
       setIsSubmitting(false);
     })
   }
@@ -75,6 +77,19 @@ export default function ContactForm() {
               rows={4}
             />
           </Field>
+
+          {status === 'success' && (
+            <div className="flex items-center gap-2 rounded-xl border border-green-400/40 bg-green-50 dark:bg-green-500/10 px-4 py-3 text-sm font-semibold text-green-700 dark:text-green-400">
+              <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+              Message sent successfully! I'll get back to you soon.
+            </div>
+          )}
+          {status === 'error' && (
+            <div className="flex items-center gap-2 rounded-xl border border-red-400/40 bg-red-50 dark:bg-red-500/10 px-4 py-3 text-sm font-semibold text-red-700 dark:text-red-400">
+              <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+              Failed to send message. Please try again.
+            </div>
+          )}
 
           <Button 
             type="submit" 

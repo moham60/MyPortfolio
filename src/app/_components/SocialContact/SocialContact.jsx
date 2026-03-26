@@ -56,7 +56,7 @@ export default function SocialContact() {
     },
     {
       name: "LinkedIn",
-      href: "linkedin.com/in/mohamed-abdelwahab-aa7b01387",
+      href: "https://linkedin.com/in/mohamed-abdelwahab-aa7b01387",
       svg: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
           <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.7-1.8 3.5-1.8 3.7 0 4.4 2.4 4.4 5.6V21H17v-5.2c0-1.2 0-2.8-1.7-2.8-1.7 0-2 1.3-2 2.7V21H9z" />

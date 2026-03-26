@@ -56,7 +56,7 @@ export default function EducationSection() {
         <Title title={"Education Journey"} />
        
         {educations.map(education => (
-            <div className="edu my-6" key={education.degree}>
+            <div className="edu my-6 bg-card rounded-2xl border border-border-custom shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" key={education.degree}>
              <Education  degree={education.degree}
               description={education.description}
               institution={education.institution}
@@ -65,8 +65,6 @@ export default function EducationSection() {
               projects={education.projects}
               skills={education.skills}/>
             </div>
-           
-          
           ))}
         
     </motion.section>

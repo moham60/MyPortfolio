@@ -76,24 +76,8 @@ const [openMobileNav, setopenMobileNav] = useState(false)
           ))}
 
         
-          <div className="flex  md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              onClick={() => {
-                setopenMobileNav(!openMobileNav);
-              }}
-              className="inline-flex  cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm text-gray-700 dark:text-gray-500 rounded-lg md:hidden "
-              aria-expanded="false">
-              <span className="sr-only">Open main menu</span>
-              
-               
-             
-                <CiMenuFries size={30} />
-              
-            </button>
-            <div className="toggoleTheme">
+          <div className="flex items-center gap-2">
             <ToggoleTheme />
-          </div>
           </div>
           
         </div>
