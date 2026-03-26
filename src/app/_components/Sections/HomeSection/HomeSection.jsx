@@ -3,77 +3,103 @@
 import { motion } from "motion/react";
 import { transition } from "../../../../../transition";
 import Link from "next/link";
+import Image from "next/image";
+import myPhoto from "@images/myPhoto.jpg";
+
 export default function Home() {
     return (
-    
       <motion.section
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={transition}
-        className="relative px-4 py-6 sm:p-16 h-[70vh] md:h-[100vh] flex flex-col justify-center">
-        
-        
-            <motion.div
-              className="flex flex-col items-center  w-full justify-center gap-5"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={transition}>
-            <div className="title text-center relative">
-  <h1
-    className="text-2xl md:text-6xl font-extrabold mb-4 
-    bg-gradient-to-r from-primary-600 to-blue-500
-    dark:from-primary-400 dark:to-blue-400
-    bg-clip-text text-transparent"
-  >
-    Mohamed Abdelwahab
-  </h1>
+        className="relative px-4 py-6 sm:px-16 sm:py-0 min-h-screen flex items-center">
 
-  <h2 className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto">
-    Passionate{" "}
-    <span className="text-primary-600 dark:text-primary-400 font-semibold">
-      MERN Stack Developer
-    </span>{" "}
-    Building{" "}
-    <span className="text-blue-600 dark:text-blue-400 font-semibold">
-      Modern Web Apps
-    </span>{" "}
-    with{" "}
-    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
-      React & Next.js
-    </span>{" "}
-    ⚡
-  </h2>
-</div>
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full">
 
-<div className="btns flex flex-col sm:flex-row  items-center justify-center gap-4 mt-8">
-  {/* Primary Button */}
-  <button
-    className="min-w-40 px-6 py-3 rounded-xl font-semibold 
-    bg-gradient-to-r from-primary-600 to-blue-600 
-    hover:from-blue-600 hover:to-primary-600 
-    text-white shadow-lg shadow-primary-500/25 transition-all duration-300"
-  >
-    <Link href={'/projects'}>View My Work</Link>
-  </button>
+          {/* Left: Info */}
+          <motion.div
+            className="flex-1 flex flex-col gap-6 text-center md:text-left"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={transition}>
 
-  {/* Secondary Button */}
-  <a
-    target="_blank"
-    href="https://drive.google.com/file/d/1ykhRD1rkcDx7rFeg204a3EB06J4W2pJa/view?usp=sharing"
-    className="min-w-40 px-6 py-3 rounded-xl font-semibold 
-    border border-primary-500/30 
-    text-primary-600 dark:text-primary-400 
-    hover:bg-primary-50 dark:hover:bg-primary-500/10 
-    transition-all duration-300 text-center"
-  >
-    Download CV
-  </a>
-</div>
+            <h1
+              className="text-3xl md:text-6xl font-extrabold
+              bg-gradient-to-r from-[var(--color-neon-blue)] to-[var(--primary-600)]
+              bg-clip-text text-transparent leading-tight">
+              Mohamed Abdelwahab
+            </h1>
 
-            </motion.div>
-          </motion.section>
-        
-  );
+            <h2 className="text-lg md:text-2xl" style={{ color: "var(--color-text-secondary)" }}>
+              Passionate{" "}
+              <span className="font-semibold" style={{ color: "var(--color-neon-blue)" }}>
+                MERN Stack Developer
+              </span>{" "}
+              Building{" "}
+              <span className="font-semibold" style={{ color: "var(--color-neon-pink)" }}>
+                Modern Web Apps
+              </span>{" "}
+              with{" "}
+              <span className="font-semibold" style={{ color: "var(--color-neon-green)" }}>
+                React &amp; Next.js
+              </span>{" "}
+              ⚡
+            </h2>
+
+            <p className="text-base leading-relaxed max-w-lg mx-auto md:mx-0" style={{ color: "var(--color-text-secondary)" }}>
+              I&apos;m a passionate <strong>Front-End Developer</strong> specializing in{" "}
+              <span style={{ color: "var(--color-neon-blue)" }}>React, Next.js, and TailwindCSS</span>.
+              I love building responsive, modern, and user-friendly web applications.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center md:items-start gap-4">
+              <Link
+                href="/projects"
+                className="min-w-40 px-6 py-3 rounded-xl font-semibold text-center text-white
+                  shadow-lg transition-all duration-300 hover:scale-105"
+                style={{ background: "linear-gradient(to right, var(--color-neon-blue), var(--primary-600))" }}>
+                View My Work
+              </Link>
+
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/1ykhRD1rkcDx7rFeg204a3EB06J4W2pJa/view?usp=sharing"
+                className="min-w-40 px-6 py-3 rounded-xl font-semibold text-center
+                  border transition-all duration-300 hover:scale-105"
+                style={{
+                  borderColor: "var(--color-neon-blue)",
+                  color: "var(--color-neon-blue)",
+                }}>
+                Download CV
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right: Photo */}
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={transition}>
+            <div
+              className="rounded-full p-1 shadow-2xl"
+              style={{ background: "linear-gradient(135deg, var(--color-neon-blue), var(--color-neon-pink))" }}>
+              <Image
+                src={myPhoto}
+                alt="Mohamed Abdelwahab"
+                width={280}
+                height={280}
+                className="rounded-full object-cover w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72"
+                priority
+              />
+            </div>
+          </motion.div>
+
+        </div>
+      </motion.section>
+    );
 }
